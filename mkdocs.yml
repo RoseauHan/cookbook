@@ -1,8 +1,50 @@
-site_name: My Docs
+# Project information
+site_name: 'Cookbook-roseau'
+site_description: 'roseau knowledge database.'
+site_author: 'roseauhan'
+site_url: 'https://roseauhan.github.io/cookbook-material/'
 
-# theme:
-#   name: null
-#   custom_dir: 'mkdocs-material/material'
+# Repository
+repo_name: 'Cookbook-roseau'
+repo_url: 'https://github.com/RoseauHan/cookbook-material'
 
+# Copyright
+copyright: 'Copyright &copy; 2018 - 2019 roseauhan'
+
+# Configuration
 theme:
   name: 'material'
+  language: 'en'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# Customization
+extra:
+  disqus: 'roseauhan'
+  manifest: 'manifest.webmanifest'
+  social:
+    - type: 'github-alt'
+      link: 'https://github.com/roseauhan'
+    - type: 'twitter'
+      link: 'https://twitter.com/roseauhan'
+    - type: 'dribbble'
+      link: 'https://dribbble.com/roseauhan'
+    - type: 'rss'
+      link: 'https://roseauhan.github.io'
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
