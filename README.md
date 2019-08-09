@@ -34,7 +34,7 @@ https://roseauhan.github.io/cookbook-material/
 
 ![wwdc19-og-fix.png](https://i.loli.net/2019/08/09/gQ4tmo6idskz87x.png)
 
-## 🧐如何搭建的？
+## 🧐如何搭建？
 
 - 使用 [MkDocs](https://github.com/mkdocs/mkdocs/) -Project documentation with Markdown.
 
