@@ -1,0 +1,1174 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="roseau knowledge database.">
+      
+      
+        <link rel="canonical" href="https://roseauhan.github.io/cookbook-material/about/about/">
+      
+      
+        <meta name="author" content="roseauhan">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>about - Cookbook-roseau</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../../manifest.webmanifest">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#writing-your-docs" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://roseauhan.github.io/cookbook-material/" title="Cookbook-roseau" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Cookbook-roseau
+            </span>
+            <span class="md-header-nav__topic">
+              
+                about
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/RoseauHan/cookbook-material/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Cookbook-roseau
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Cookbook" class="md-tabs__link">
+        Cookbook
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Blog" class="md-tabs__link md-tabs__link--active">
+          Blog
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://roseauhan.github.io/cookbook-material/" title="Cookbook-roseau" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Cookbook-roseau
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/RoseauHan/cookbook-material/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Cookbook-roseau
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Cookbook" class="md-nav__link">
+      Cookbook
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Blog
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Blog
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        about
+      </label>
+    
+    <a href="./" title="about" class="md-nav__link md-nav__link--active">
+      about
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-layout" title="File layout" class="md-nav__link">
+    File layout
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index-pages" title="Index pages" class="md-nav__link">
+    Index pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-pages-and-navigation" title="Configure Pages and Navigation" class="md-nav__link">
+    Configure Pages and Navigation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-with-markdown" title="Writing with Markdown" class="md-nav__link">
+    Writing with Markdown
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internal-links" title="Internal links" class="md-nav__link">
+    Internal links
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linking-to-pages" title="Linking to pages" class="md-nav__link">
+    Linking to pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-to-images-and-media" title="Linking to images and media" class="md-nav__link">
+    Linking to images and media
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-from-raw-html" title="Linking from raw HTML" class="md-nav__link">
+    Linking from raw HTML
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-data" title="Meta-Data" class="md-nav__link">
+    Meta-Data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yaml-style-meta-data" title="YAML Style Meta-Data" class="md-nav__link">
+    YAML Style Meta-Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multimarkdown-style-meta-data" title="MultiMarkdown Style Meta-Data" class="md-nav__link">
+    MultiMarkdown Style Meta-Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" title="Tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fenced-code-blocks" title="Fenced code blocks" class="md-nav__link">
+    Fenced code blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-layout" title="File layout" class="md-nav__link">
+    File layout
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index-pages" title="Index pages" class="md-nav__link">
+    Index pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-pages-and-navigation" title="Configure Pages and Navigation" class="md-nav__link">
+    Configure Pages and Navigation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-with-markdown" title="Writing with Markdown" class="md-nav__link">
+    Writing with Markdown
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internal-links" title="Internal links" class="md-nav__link">
+    Internal links
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linking-to-pages" title="Linking to pages" class="md-nav__link">
+    Linking to pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-to-images-and-media" title="Linking to images and media" class="md-nav__link">
+    Linking to images and media
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking-from-raw-html" title="Linking from raw HTML" class="md-nav__link">
+    Linking from raw HTML
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-data" title="Meta-Data" class="md-nav__link">
+    Meta-Data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yaml-style-meta-data" title="YAML Style Meta-Data" class="md-nav__link">
+    YAML Style Meta-Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multimarkdown-style-meta-data" title="MultiMarkdown Style Meta-Data" class="md-nav__link">
+    MultiMarkdown Style Meta-Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" title="Tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fenced-code-blocks" title="Fenced code blocks" class="md-nav__link">
+    Fenced code blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/RoseauHan/cookbook-material/edit/master/docs/about/about.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="writing-your-docs">Writing your docs<a class="headerlink" href="#writing-your-docs" title="Permanent link">&para;</a></h1>
+<p>How to layout and write your Markdown source files.</p>
+<hr />
+<h2 id="file-layout">File layout<a class="headerlink" href="#file-layout" title="Permanent link">&para;</a></h2>
+<p>Your documentation source should be written as regular Markdown files (see
+<a href="#writing-with-markdown">Writing with Markdown</a> below), and placed in the
+<a href="configuration.md#docs_dir">documentation directory</a>. By default, this directory
+will be named <code>docs</code> and will exist at the top level of your project, alongside
+the <code>mkdocs.yml</code> configuration file.</p>
+<p>The simplest project you can create will look something like this:</p>
+<div class="codehilite"><pre><span></span>mkdocs.yml
+docs/
+    index.md
+</pre></div>
+
+
+<p>By convention your project homepage should always be named <code>index</code>. Any of the
+following extensions may be used for your Markdown source files: <code>markdown</code>,
+<code>mdown</code>, <code>mkdn</code>, <code>mkd</code>, <code>md</code>. All Markdown files included in your documentation
+directory will be rendered in the built site regardless of any settings.</p>
+<p>You can also create multi-page documentation, by creating several Markdown
+files:</p>
+<div class="codehilite"><pre><span></span>mkdocs.yml
+docs/
+    index.md
+    about.md
+    license.md
+</pre></div>
+
+
+<p>The file layout you use determines the URLs that are used for the generated
+pages. Given the above layout, pages would be generated for the following URLs:</p>
+<div class="codehilite"><pre><span></span>/
+/about/
+/license/
+</pre></div>
+
+
+<p>You can also include your Markdown files in nested directories if that better
+suits your documentation layout.</p>
+<div class="codehilite"><pre><span></span>docs/
+    index.md
+    user-guide/getting-started.md
+    user-guide/configuration-options.md
+    license.md
+</pre></div>
+
+
+<p>Source files inside nested directories will cause pages to be generated with
+nested URLs, like so:</p>
+<div class="codehilite"><pre><span></span>/
+/user-guide/getting-started/
+/user-guide/configuration-options/
+/license/
+</pre></div>
+
+
+<h3 id="index-pages">Index pages<a class="headerlink" href="#index-pages" title="Permanent link">&para;</a></h3>
+<p>When a directory is requested, by default, most web servers will return an index
+file (usually named <code>index.html</code>) contained within that directory if one exists.
+For that reason, the homepage in all of the examples above has been named
+<code>index.md</code>, which MkDocs will render to <code>index.html</code> when building the site.</p>
+<p>Many repository hosting sites provide special treatment for README files by
+displaying the contents of the README file when browsing the contents of a
+directory. Therefore, MkDocs will allow you to name your index pages as
+<code>README.md</code> instead of <code>index.md</code>. In that way, when users are browsing your
+source code, the repository host can display the index page of that directory as
+it is a README file. However, when MkDocs renders your site, the file will be
+renamed to <code>index.html</code> so that the server will serve it as a proper index file.</p>
+<p>If both an <code>index.md</code> file and a <code>README.md</code> file are found in the same
+directory, then the <code>index.md</code> file is used and the <code>README.md</code> file is
+ignored.</p>
+<h3 id="configure-pages-and-navigation">Configure Pages and Navigation<a class="headerlink" href="#configure-pages-and-navigation" title="Permanent link">&para;</a></h3>
+<p>The <a href="configuration.md#nav">nav</a> configuration setting in your <code>mkdocs.yml</code> file
+defines which pages are included in the global site navigation menu as well as
+the structure of that menu. If not provided, the navigation will be
+automatically created by discovering all the Markdown files in the
+<a href="configuration.md#docs_dir">documentation directory</a>. An automatically created
+navigation configuration will always be sorted alphanumerically by file name
+(except that index files will always be listed first within a sub-section). You
+will need to manually define your navigation configuration if you would like
+your navigation menu sorted differently.</p>
+<p>A simple navigation configuration looks like this:</p>
+<div class="codehilite"><pre><span></span>nav:
+- &#39;index.md&#39;
+- &#39;about.md&#39;
+</pre></div>
+
+
+<p>All paths in the navigation configuration must be relative to the <code>docs_dir</code>
+configuration option. If that option is set to the default value, <code>docs</code>, the
+source files for the above configuration would be located at <code>docs/index.md</code> and
+<code>docs/about.md</code>.</p>
+<p>The above example will result in two navigation items being created at the top
+level and with their titles inferred from the contents of the file (or the
+filename if no title is defined within the file). To define a custom title for
+the pages, the title can be added before the filename.</p>
+<div class="codehilite"><pre><span></span>nav:
+- Home: &#39;index.md&#39;
+- About: &#39;about.md&#39;
+</pre></div>
+
+
+<p>Note that if a title is defined for a page in the navigation, that title will be
+used throughout the site for that page and will override any title defined
+within the page itself.</p>
+<p>Navigation sub-sections can be created by listing related pages together under a
+section title. For example:</p>
+<div class="codehilite"><pre><span></span>nav:
+- Home: &#39;index.md&#39;
+- User Guide:
+    - &#39;Writing your docs&#39;: &#39;writing-your-docs.md&#39;
+    - &#39;Styling your docs&#39;: &#39;styling-your-docs.md&#39;
+- About:
+    - &#39;License&#39;: &#39;license.md&#39;
+    - &#39;Release Notes&#39;: &#39;release-notes.md&#39;
+</pre></div>
+
+
+<p>With the above configuration we have three top level items: "Home", "User Guide"
+and "About." "Home" is a link to the homepage for the site. Under the "User
+Guide" section two pages are listed: "Writing your docs" and "Styling your
+docs." Under the "About" section two more pages are listed: "License" and
+"Release Notes."</p>
+<p>Note that a section cannot have a page assigned to it. Sections are only
+containers for child pages and sub-sections. You may nest sections as deeply as
+you like. However, be careful that you don't make it too difficult for your
+users to navigate through the site navigation by over-complicating the nesting.
+While sections may mirror your directory structure, they do not have to.</p>
+<p>Any pages not listed in your navigation configuration will still be rendered and
+included with the built site, however, they will not be linked from the global
+navigation and will not be included in the <code>previous</code> and <code>next</code> links. Such
+pages will be "hidden" unless linked to directly.</p>
+<h2 id="writing-with-markdown">Writing with Markdown<a class="headerlink" href="#writing-with-markdown" title="Permanent link">&para;</a></h2>
+<p>MkDocs pages must be authored in <a href="https://daringfireball.net/projects/markdown/">Markdown</a>, a lightweight markup language
+which results in easy-to-read, easy-to-write plain text documents that can be
+converted to valid HTML documents in a predictable manner.</p>
+<p>MkDocs uses the <a href="https://python-markdown.github.io/">Python-Markdown</a> library to render Markdown documents to HTML.
+Python-Markdown is almost completely compliant with the <a href="https://daringfireball.net/projects/markdown/">reference
+implementation</a>, although there are a few very minor <a href="https://python-markdown.github.io/#differences">differences</a>.</p>
+<p>In addition to the base Markdown <a href="https://daringfireball.net/projects/markdown/syntax">syntax</a> which is common across all Markdown
+implementations, MkDocs includes support for extending the Markdown syntax with
+Python-Markdown <a href="https://python-markdown.github.io/extensions/">extensions</a>. See the MkDocs' <a href="configuration.md#markdown_extensions">markdown_extensions</a>
+configuration setting for details on how to enable extensions.</p>
+<p>MkDocs includes some extensions by default, which are highlighted below.</p>
+<h3 id="internal-links">Internal links<a class="headerlink" href="#internal-links" title="Permanent link">&para;</a></h3>
+<p>MkDocs allows you to interlink your documentation by using regular Markdown
+<a href="https://daringfireball.net/projects/markdown/syntax#link">links</a>. However, there are a few additional benefits to formatting those links
+specifically for MkDocs as outlined below.</p>
+<h4 id="linking-to-pages">Linking to pages<a class="headerlink" href="#linking-to-pages" title="Permanent link">&para;</a></h4>
+<p>When linking between pages in the documentation you can simply use the regular
+Markdown <a href="https://daringfireball.net/projects/markdown/syntax#link">linking</a> syntax, including the <em>relative path</em> to the Markdown
+document you wish to link to.</p>
+<div class="codehilite"><pre><span></span>Please see the [project license](license.md) for further details.
+</pre></div>
+
+
+<p>When the MkDocs build runs, these Markdown links will automatically be
+transformed into an HTML hyperlink to the appropriate HTML page.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using absolute paths with links is not officially supported. Relative paths
+are adjusted by MkDocs to ensure they are always relative to the page. Absolute
+paths are not modified at all. This means that your links using absolute paths
+might work fine in your local environment but they might break once you deploy
+them to your production server.</p>
+</div>
+<p>If the target documentation file is in another directory you'll need to make
+sure to include any relative directory path in the link.</p>
+<div class="codehilite"><pre><span></span>Please see the [project license](../about/license.md) for further details.
+</pre></div>
+
+
+<p>The <a href="https://python-markdown.github.io/extensions/toc/">toc</a> extension is used by MkDocs to generate an ID for every header in your
+Markdown documents. You can use that ID to link to a section within a target
+document by using an anchor link. The generated HTML will correctly transform
+the path portion of the link, and leave the anchor portion intact.</p>
+<div class="codehilite"><pre><span></span>Please see the [project license](about.md#license) for further details.
+</pre></div>
+
+
+<p>Note that IDs are created from the text of a header. All text is converted to
+lowercase and any disallowed characters, including white-space, are converted to
+dashes. Consecutive dashes are then reduced to a single dash.</p>
+<p>There are a few configuration settings provided by the toc extension which you
+can set in your <code>mkdocs.yml</code> configuration file to alter the default behavior:</p>
+<p><code>permalink</code>:</p>
+<p>: Generate permanent links at the end of each header. Default: <code>False</code>.</p>
+<div class="codehilite"><pre><span></span>When set to True the paragraph symbol (&amp;para; or `&amp;para;`) is used as the
+link text. When set to a string, the provided string is used as the link
+text. For example, to use the hash symbol (`#`) instead, do:
+
+    markdown_extensions:
+        - toc:
+            permalink: &quot;#&quot;
+</pre></div>
+
+
+<p><code>baselevel</code>:</p>
+<p>: Base level for headers. Default: <code>1</code>.</p>
+<div class="codehilite"><pre><span></span>This setting allows the header levels to be automatically adjusted to fit
+within the hierarchy of your HTML templates. For example, if the Markdown
+text for a page should not contain any headers higher than level 2 (`&lt;h2&gt;`),
+do:
+
+    markdown_extensions:
+        - toc:
+            baselevel: 2
+
+Then any headers in your document would be increased by 1. For example, the
+header `# Header` would be rendered as a level 2 header (`&lt;h2&gt;`) in the HTML
+output.
+</pre></div>
+
+
+<p><code>separator</code>:</p>
+<p>: Word separator. Default: <code>-</code>.</p>
+<div class="codehilite"><pre><span></span>Character which replaces white-space in generated IDs. If you prefer
+underscores, then do:
+
+    markdown_extensions:
+        - toc:
+            separator: &quot;_&quot;
+</pre></div>
+
+
+<p>Note that if you would like to define multiple of the above settings, you must
+do so under a single <code>toc</code> entry in the <code>markdown_extensions</code> configuration
+option.</p>
+<div class="codehilite"><pre><span></span>markdown_extensions:
+    - toc:
+        permalink: &quot;#&quot;
+        baselevel: 2
+        separator: &quot;_&quot;
+</pre></div>
+
+
+<h4 id="linking-to-images-and-media">Linking to images and media<a class="headerlink" href="#linking-to-images-and-media" title="Permanent link">&para;</a></h4>
+<p>As well as the Markdown source files, you can also include other file types in
+your documentation, which will be copied across when generating your
+documentation site. These might include images and other media.</p>
+<p>For example, if your project documentation needed to include a <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">GitHub pages
+CNAME file</a> and a PNG formatted screenshot image then your file layout might
+look as follows:</p>
+<div class="codehilite"><pre><span></span>mkdocs.yml
+docs/
+    CNAME
+    index.md
+    about.md
+    license.md
+    img/
+        screenshot.png
+</pre></div>
+
+
+<p>To include images in your documentation source files, simply use any of the
+regular Markdown image syntaxes:</p>
+<div class="codehilite"><pre><span></span>Cupcake indexer is a snazzy new project for indexing small cakes.
+
+![Screenshot](img/screenshot.png)
+
+*Above: Cupcake indexer in progress*
+</pre></div>
+
+
+<p>Your image will now be embedded when you build the documentation, and should
+also be previewed if you're working on the documentation with a Markdown editor.</p>
+<h4 id="linking-from-raw-html">Linking from raw HTML<a class="headerlink" href="#linking-from-raw-html" title="Permanent link">&para;</a></h4>
+<p>Markdown allows document authors to fall back to raw HTML when the Markdown
+syntax does not meets the author's needs. MkDocs does not limit Markdown in this
+regard. However, as all raw HTML is ignored by the Markdown parser, MkDocs is
+not able to validate or convert links contained in raw HTML. When including
+internal links within raw HTML, you will need to manually format the link
+appropriately for the rendered document.</p>
+<h3 id="meta-data">Meta-Data<a class="headerlink" href="#meta-data" title="Permanent link">&para;</a></h3>
+<p>MkDocs includes support for both YAML and MultiMarkdown style meta-data (often
+called front-matter). Meta-data consists of a series of keywords and values
+defined at the beginning of a Markdown document, which are stripped from the
+document prior to it being processing by Python-Markdown. The key/value pairs
+are passed by MkDocs to the page template. Therefore, if a theme includes
+support, the values of any keys can be displayed on the page or used to control
+the page rendering. See your theme's documentation for information about which
+keys may be supported, if any.</p>
+<p>In addition to displaying information in a template, MkDocs includes support for
+a few predefined meta-data keys which can alter the behavior of MkDocs for that
+specific page. The following keys are supported:</p>
+<p><code>template</code>:</p>
+<p>: The template to use with the current page.</p>
+<div class="codehilite"><pre><span></span>By default, MkDocs uses the `main.html` template of a theme to render
+Markdown pages. You can use the `template` meta-data key to define a
+different template file for that specific page. The template file must be
+available on the path(s) defined in the theme&#39;s environment.
+</pre></div>
+
+
+<p><code>title</code>:</p>
+<p>: The "title" to use for the document.</p>
+<div class="codehilite"><pre><span></span>MkDocs will attempt to determine the title of a document in the following
+ways, in order:
+
+1. A title defined in the [nav] configuration setting for a document.
+2. A title defined in the `title` meta-data key of a document.
+3. A level 1 Markdown header on the first line of the document body.
+4. The filename of a document.
+
+Upon finding a title for a page, MkDoc does not continue checking any
+additional sources in the above list.
+</pre></div>
+
+
+<h4 id="yaml-style-meta-data">YAML Style Meta-Data<a class="headerlink" href="#yaml-style-meta-data" title="Permanent link">&para;</a></h4>
+<p>YAML style meta-data consists of <a href="http://yaml.org">YAML</a> key/value pairs wrapped in YAML style
+deliminators to mark the start and/or end of the meta-data. The first line of
+a document must be <code>---</code>. The meta-data ends at the first line containing an
+end deliminator (either <code>---</code> or <code>...</code>). The content between the deliminators is
+parsed as <a href="http://yaml.org">YAML</a>.</p>
+<div class="codehilite"><pre><span></span>---
+title: My Document
+summary: A brief description of my document.
+authors:
+    - Waylan Limberg
+    - Tom Christie
+date: 2018-07-10
+some_url: https://example.com
+---
+This is the first paragraph of the document.
+</pre></div>
+
+
+<p>YAML is able to detect data types. Therefore, in the above example, the values
+of <code>title</code>, <code>summary</code> and <code>some_url</code> are strings, the value of <code>authors</code> is a
+list of strings and the value of <code>date</code> is a <code>datetime.date</code> object. Note that
+the YAML keys are case sensitive and MkDocs expects keys to be all lowercase.
+The top level of the YAML must be a collection of key/value pairs, which results
+in a Python <code>dict</code> being returned. If any other type is returned or the YAML
+parser encounters an error, then MkDocs does not recognize the section as
+meta-data, the page's <code>meta</code> attribute will be empty, and the section is not
+removed from the document.</p>
+<h4 id="multimarkdown-style-meta-data">MultiMarkdown Style Meta-Data<a class="headerlink" href="#multimarkdown-style-meta-data" title="Permanent link">&para;</a></h4>
+<p>MultiMarkdown style meta-data uses a format first introduced by the
+<a href="http://fletcherpenney.net/MultiMarkdown_Syntax_Guide#metadata">MultiMarkdown</a> project. The data consists of a series of keywords and values
+defined at the beginning of a Markdown document, like this:</p>
+<div class="codehilite"><pre><span></span>Title:   My Document
+Summary: A brief description of my document.
+Authors: Waylan Limberg
+         Tom Christie
+Date:    January 23, 2018
+blank-value:
+some_url: https://example.com
+
+This is the first paragraph of the document.
+</pre></div>
+
+
+<p>The keywords are case-insensitive and may consist of letters, numbers,
+underscores and dashes and must end with a colon. The values consist of anything
+following the colon on the line and may even be blank.</p>
+<p>If a line is indented by 4 or more spaces, that line is assumed to be an
+additional line of the value for the previous keyword. A keyword may have as
+many lines as desired. All lines are joined into a single string.</p>
+<p>The first blank line ends all meta-data for the document. Therefore, the first
+line of a document must not be blank.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MkDocs does not support YAML style deliminators (<code>---</code> or <code>...</code>) for
+MultiMarkdown style meta-data. In fact, MkDocs relies on the the presence or
+absence of the deliminators to determine whether YAML style meta-data or
+MultiMarkdown style meta-data is being used. If the deliminators are
+detected, but the content between the deliminators is not valid YAML
+meta-data, MkDocs does not attempt to parse the content as MultiMarkdown
+style meta-data.</p>
+</div>
+<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://python-markdown.github.io/extensions/tables/">tables</a> extension adds a basic table syntax to Markdown which is popular
+across multiple implementations. The syntax is rather simple and is generally
+only useful for simple tabular data.</p>
+<p>A simple table looks like this:</p>
+<div class="codehilite"><pre><span></span>First Header | Second Header | Third Header
+------------ | ------------- | ------------
+Content Cell | Content Cell  | Content Cell
+Content Cell | Content Cell  | Content Cell
+</pre></div>
+
+
+<p>If you wish, you can add a leading and tailing pipe to each line of the table:</p>
+<div class="codehilite"><pre><span></span>| First Header | Second Header | Third Header |
+| ------------ | ------------- | ------------ |
+| Content Cell | Content Cell  | Content Cell |
+| Content Cell | Content Cell  | Content Cell |
+</pre></div>
+
+
+<p>Specify alignment for each column by adding colons to separator lines:</p>
+<div class="codehilite"><pre><span></span>First Header | Second Header | Third Header
+:----------- |:-------------:| -----------:
+Left         | Center        | Right
+Left         | Center        | Right
+</pre></div>
+
+
+<p>Note that table cells cannot contain any block level elements and cannot contain
+multiple lines of text. They can, however, include inline Markdown as defined in
+Markdown's <a href="https://daringfireball.net/projects/markdown/syntax">syntax</a> rules.</p>
+<p>Additionally, a table must be surrounded by blank lines. There must be a blank
+line before and after the table.</p>
+<h3 id="fenced-code-blocks">Fenced code blocks<a class="headerlink" href="#fenced-code-blocks" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://python-markdown.github.io/extensions/fenced_code_blocks/">fenced code blocks</a> extension adds an alternate method of defining code
+blocks without indentation.</p>
+<p>The first line should contain 3 or more backtick (<code>`</code>) characters, and the
+last line should contain the same number of backtick characters (<code>`</code>):</p>
+<div class="codehilite"><pre><span></span>```
+Fenced code blocks are like Standard
+Markdown’s regular code blocks, except that
+they’re not indented and instead rely on
+start and end fence lines to delimit the
+code block.
+```
+</pre></div>
+
+
+<p>With this approach, the language can optionally be specified on the first line
+after the backticks which informs any syntax highlighters of the language used:</p>
+<div class="codehilite"><pre><span></span>```python
+def fn():
+    pass
+```
+</pre></div>
+
+
+<p>Note that fenced code blocks can not be indented. Therefore, they cannot be
+nested inside list items, blockquotes, etc.</p>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://roseauhan.github.io/cookbook-material/about/about/";
+      this.page.identifier =
+        "about/about/";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//roseauhan.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../.." title="Cookbook" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Cookbook
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2019 roseauhan
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/roseauhan" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/roseauhan" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://dribbble.com/roseauhan" class="md-footer-social__link fa fa-dribbble"></a>
+    
+      <a href="https://roseauhan.github.io" class="md-footer-social__link fa fa-rss"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
