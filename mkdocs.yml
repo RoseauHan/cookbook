@@ -1,3 +1,13 @@
+# document configuration
+nav:
+- Cookbook: index.md
+
+- App:
+  - MacApp: app/Whats-in-my-Mac.md
+
+- Blog: 
+  - about: about/about.md
+
 # Project information
 site_name: 'Cookbook-roseau'
 site_description: 'roseau knowledge database.'
@@ -14,13 +24,19 @@ copyright: 'Copyright &copy; 2018 - 2019 roseauhan'
 # Configuration
 theme:
   name: 'material'
-  language: 'en'
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: true
   palette:
-    primary: 'indigo'
-    accent: 'indigo'
+    primary: indigo
+    accent: indigo
   font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
+    text: Roboto
+    code: Roboto Mono
+  # favicon: assets/images/favicon.ico
+  logo: "https://i.loli.net/2019/08/11/ZNIuBreOtdp1XjG.png"
+
 
 # Customization
 extra:
