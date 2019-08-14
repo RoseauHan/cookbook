@@ -13,11 +13,11 @@
 
 [🇨🇳中文文档](https://github.com/RoseauHan/cookbook-material/blob/master/README-CN.md)
 
-**Personal Knowledge Database wiki Library **
+***Personal Knowledge Database wiki Library***
 
 </div>
 
-> Recent update: [What's in my Mac?](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Mac/)
+> Recently update: [What's in my Mac?](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Mac/)
 
 
 ## 😋What's this？
@@ -26,10 +26,11 @@
 ### Personal knowledge database wiki library，GPL license，Welcome 👏pull request
 
 
-```
-https://roseauhan.github.io/cookbook-material/
-```
+<div align="center">
 
+[Cookbook —— Personal knowledge database wiki library ](https://roseauhan.github.io/cookbook-material)
+
+</div>
 
 ![](https://i.loli.net/2019/08/09/Z9iGLzEN7bmJgsx.png)
 
