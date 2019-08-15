@@ -17,13 +17,16 @@
 
 </div>
 
-> Recently update: [What's in my Mac?](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Mac/)
+> Recently update: 
+> - [What's in my Mac?](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Mac/)
+> - [What's in my Android](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Android)
+
 
 
 ## 😋What's this？
 
 
-### Personal knowledge database wiki library，GPL license，Welcome 👏pull request
+**Personal knowledge database wiki library，GPL license，Welcome 👏pull request**
 
 
 <div align="center">
@@ -67,11 +70,16 @@ just a simple command, then you can deploy it in Github pages. Now this project 
 - ⚑ I will write a more concrete arcticle to help your guys to learn it later.
 
 ---
+## 🧐How to Contribute？
 
+![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/ScreenShot.png)
+- You can edit the article simply click the button
+- or you can pull request to [my repo](https://github.com/RoseauHan/cookbook-material/)
 
 📒 **Cookbook** ©roseauhan. Released under the GPL License.
 
 
-Authored and maintained by roseauhan.
+Author & maintainer: roseauhan.
+
 
 [@Blog](https://roseauhan.github.io/) - [@GitHub](https://github.com/roseauhan) - [@Instagram](https://instagram.com/roseauhan)

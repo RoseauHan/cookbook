@@ -54,9 +54,14 @@ Material is a theme for MkDocs, an excellent static site generator geared toward
 - ⚑ 之后我会写一篇详细的部署指南。
 
 ---
+## 🧐如何贡献？
+
+![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/ScreenShot.png)
+- 点击文中这个按钮，就可以直接编辑。
+- 或者直接向我 [pull request](https://github.com/RoseauHan/cookbook-material/)
 
 📒 **Cookbook** ©roseauhan. Released under the GPL License.
 
-Authored and maintained by roseauhan.
+Author & maintainer: roseauhan.
 
 [@Blog](https://roseauhan.github.io/) - [@GitHub](https://github.com/roseauhan) - [@Instagram](https://instagram.com/roseauhan)
