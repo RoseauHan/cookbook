@@ -4,7 +4,7 @@
 
 <h1> 📚Cookbook  </h1>
 
-[![](https://flat.badgen.net/badge/github/github?icon)](https://roseauhan.github.io/cookbook-material)
+[![](https://flat.badgen.net/badge/github/github?icon)](https://github.com/RoseauHan/cookbook-material)
 [![](https://badgen.net/badge/readthedoc/pass/yellow)](https://roseau-cookbook.readthedocs.io)
 [![](https://img.shields.io/github/last-commit/roseauhan/cookbook-material/gh-pages)](https://github.com/RoseauHan/cookbook-material/tree/gh-pages)
 [![](https://badgen.net/twitter/follow/roseauhan)](https://twitter.com/roseauhan)
