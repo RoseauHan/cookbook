@@ -62,13 +62,10 @@ MkDocs is a fast, simple and downright gorgeous static site generator that's gea
 ```
 Material is a theme for MkDocs, an excellent static site generator geared towards project documentation. It is built using Google's Material Design guidelines.
 ```
-
-`mkdocs gh-deploy`
-
-just a simple command, then you can deploy it in Github pages. Now this project is deployed not only [GitHub Pages](https://roseauhan.github.io/cookbook-material/)，but also [readthedoc](https://roseau-cookbook.readthedocs.io)，but the readthedoc version can only using the default theme.
+just a simple command `mkdocs gh-deploy`, then you can deploy it in Github pages. Now this project is deployed not only [GitHub Pages](https://roseauhan.github.io/cookbook-material/)，but also [readthedoc](https://roseau-cookbook.readthedocs.io)，but the readthedoc version can only using the default theme.
 
 
-- ⚑ I will write a more concrete arcticle to help your guys to learn it later.
+- ⚑ I will write a more concrete article to help your guys to learn it later.
 
 ---
 ## 🧐How to Contribute？
