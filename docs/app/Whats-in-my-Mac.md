@@ -34,7 +34,7 @@ Note that:
 
 - [![Awesome List](https://camo.githubusercontent.com/6eaef9a968596cd5bebfa6c390118c9354be2d97/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d617765736f6d652e737667)](https://camo.githubusercontent.com/6eaef9a968596cd5bebfa6c390118c9354be2d97/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d617765736f6d652e737667) means hyperlink to a corresponding **Awesome list** for the item;
 
-- 💰means not to use or need to pay for premium features;
+- 💰means must pay to use or need to pay for premium features;
 
 
 
