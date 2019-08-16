@@ -4,7 +4,9 @@ nav:
 
 - App:
   - Mac App: app/Whats-in-my-Mac.md
+  - iPad App: app/Whats-in-my-iPad.md
   - Android App: app/Whats-in-my-Android.md
+
 
 # Project information
 site_name: 'Cookbook-roseau'
