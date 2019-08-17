@@ -4,6 +4,7 @@ nav:
 
 - App:
   - Mac App: app/Whats-in-my-Mac.md
+  - Win10 App: app/Whats-in-my-Win10.md
   - iPad App: app/Whats-in-my-iPad.md
   - Android App: app/Whats-in-my-Android.md
 
