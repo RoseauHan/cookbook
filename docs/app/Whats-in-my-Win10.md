@@ -1,5 +1,5 @@
 ---
-title: What's in my Win20 ?
+title: What's in my Win10 ?
 summary: record and share my own Win10 applications.
 authors:
     - roseau
