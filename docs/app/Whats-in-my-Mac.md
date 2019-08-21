@@ -4,7 +4,7 @@ summary: record and share my own Mac applications.
 authors:
     - roseau
 date: 2019-08-13
-lastUpdate: 2019-8-16
+lastUpdate: 2019-8-21
 ---
 
 # What's in my Mac  ?
@@ -15,7 +15,7 @@ summary: record and share my own Mac applications.
 authors:
     - roseau
 date: 2019-08-13
-lastUpdate: 2019-8-14
+lastUpdate: 2019-8-21
 ```
 ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/wwZ9Uf.png)
 
@@ -57,6 +57,7 @@ Feel free to [**star**](https://github.com/RoseauHan/cookbook-material/) and [**
 |                            *Name*                            |                          *Property*                          |                        *Description*                         |                          *Install*                           | *Others* |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | -------- |
 | ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/oPQYir.png) | [![Open-Source Software](https://camo.githubusercontent.com/27b0c862bc5dee3cc822a00c0645f66104a583b0/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d6f73732e737667)](https://bitbucket.org/kosovan/theunarchiver) [![Freeware](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667)](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667) |               *Simple  but useful unzip tool.*               | [App Store](https://itunes.apple.com/us/app/the-unarchiver/id425424353?mt=12) |          |
+| ![image-20190821225123606](/Users/roseau/Library/Application Support/typora-user-images/image-20190821225123606.png) | [![Open-Source Software](https://camo.githubusercontent.com/27b0c862bc5dee3cc822a00c0645f66104a583b0/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d6f73732e737667)](https://bitbucket.org/kosovan/theunarchiver) [![Freeware](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667)](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667) | *Screensaver inspired by Apple's Event on October 30, 2018*  |                 `brew cask install brooklyn`                 |          |
 | ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/iGjspm.png) |                              💰                               | *Easily download videos from thousands of different sites.*  |                  `brew cask install downie`                  |          |
 | ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/gnXuSD.png) | [![Open-Source Software](https://camo.githubusercontent.com/27b0c862bc5dee3cc822a00c0645f66104a583b0/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d6f73732e737667)](https://github.com/agalwood/Motrix) [![Freeware](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667)](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667) | *A full-featured download manager.Support downloading HTTP, FTP, BitTorrent, Magnet, Baidu Net Disk etc.* |                  `brew cask install motrix`                  |          |
 | ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/EJip0M.png) | [![Freeware](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667)](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667) |               *任何设备，随时随地实现文件共享*               |                 `brew cask install nutstore`                 |          |
