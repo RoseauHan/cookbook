@@ -5,24 +5,24 @@
 
 <h1> 📚Cookbook  </h1>
 
-[![](https://flat.badgen.net/badge/github/github?icon)](https://github.com/RoseauHan/cookbook-material)
+[![](https://flat.badgen.net/badge/github/github?icon)](https://github.com/RoseauHan/cookbook)
 [![](https://badgen.net/badge/readthedoc/pass/yellow)](https://roseau-cookbook.readthedocs.io)
-[![](https://img.shields.io/github/last-commit/roseauhan/cookbook-material/gh-pages)](https://github.com/RoseauHan/cookbook-material/tree/gh-pages)
+[![](https://img.shields.io/github/last-commit/roseauhan/cookbook/gh-pages)](https://github.com/RoseauHan/cookbook/tree/gh-pages)
 [![](https://badgen.net/twitter/follow/roseauhan)](https://twitter.com/roseauhan)
-[![](https://img.shields.io/github/license/RoseauHan/cookbook-material)](https://github.com/RoseauHan/cookbook-material/tree/master/LICENSE)
+[![](https://img.shields.io/github/license/RoseauHan/cookbook)](https://github.com/RoseauHan/cookbook/tree/master/LICENSE)
 
-[🇨🇳中文文档](https://github.com/RoseauHan/cookbook-material/blob/master/README-CN.md)
+[🇨🇳中文文档](https://github.com/RoseauHan/cookbook/blob/master/README-CN.md)
 
 ***Personal Knowledge Database wiki Library***
 
 </div>
 
 > Recently update: 
-> - [What's in my Chrome Extensions](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Chrome-extensions)
-> - [What's in my Win10](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Win10)
-> - [What's in my Mac?](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Mac/)
-> - [What's in my Android](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Android)
-> - [What's in my iPad](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-iPad)
+> - [What's in my Chrome Extensions](https://roseauhan.github.io/cookbook/app/Whats-in-my-Chrome-extensions)
+> - [What's in my Win10](https://roseauhan.github.io/cookbook/app/Whats-in-my-Win10)
+> - [What's in my Mac?](https://roseauhan.github.io/cookbook/app/Whats-in-my-Mac/)
+> - [What's in my Android](https://roseauhan.github.io/cookbook/app/Whats-in-my-Android)
+> - [What's in my iPad](https://roseauhan.github.io/cookbook/app/Whats-in-my-iPad)
 
 
 
@@ -34,7 +34,7 @@
 
 <div align="center">
 
-[Cookbook —— Personal knowledge database wiki library ](https://roseauhan.github.io/cookbook-material)
+[Cookbook —— Personal knowledge database wiki library ](https://roseauhan.github.io/cookbook)
 
 </div>
 
@@ -64,7 +64,7 @@ MkDocs is a fast, simple and downright gorgeous static site generator that's gea
 ```
 Material is a theme for MkDocs, an excellent static site generator geared towards project documentation. It is built using Google's Material Design guidelines.
 ```
-just a simple command `mkdocs gh-deploy`, then you can deploy it in Github pages. Now this project is deployed not only [GitHub Pages](https://roseauhan.github.io/cookbook-material/)，but also [readthedoc](https://roseau-cookbook.readthedocs.io)，but the readthedoc version can only using the default theme.
+just a simple command `mkdocs gh-deploy`, then you can deploy it in Github pages. Now this project is deployed not only [GitHub Pages](https://roseauhan.github.io/cookbook/)，but also [readthedoc](https://roseau-cookbook.readthedocs.io)，but the readthedoc version can only using the default theme.
 
 
 - ⚑ I will write a more concrete article to help your guys to learn it later.
@@ -74,7 +74,7 @@ just a simple command `mkdocs gh-deploy`, then you can deploy it in Github pages
 
 ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/ScreenShot.png)
 - You can edit the article simply click the button
-- or you can pull request to [my repo](https://github.com/RoseauHan/cookbook-material/)
+- or you can pull request to [my repo](https://github.com/RoseauHan/cookbook/)
 
 📒 **Cookbook** ©roseauhan. Released under the GPL License.
 

@@ -4,11 +4,11 @@
 
 <h1> 📚Cookbook  </h1>
 
-[![](https://flat.badgen.net/badge/github/github?icon)](https://github.com/RoseauHan/cookbook-material)
+[![](https://flat.badgen.net/badge/github/github?icon)](https://github.com/RoseauHan/cookbook)
 [![](https://badgen.net/badge/readthedoc/pass/yellow)](https://roseau-cookbook.readthedocs.io)
-[![](https://img.shields.io/github/last-commit/roseauhan/cookbook-material/gh-pages)](https://github.com/RoseauHan/cookbook-material/tree/gh-pages)
+[![](https://img.shields.io/github/last-commit/roseauhan/cookbook/gh-pages)](https://github.com/RoseauHan/cookbook/tree/gh-pages)
 [![](https://badgen.net/twitter/follow/roseauhan)](https://twitter.com/roseauhan)
-[![](https://img.shields.io/github/license/RoseauHan/cookbook-material)](https://github.com/RoseauHan/cookbook-material/tree/master/LICENSE)
+[![](https://img.shields.io/github/license/RoseauHan/cookbook)](https://github.com/RoseauHan/cookbook/tree/master/LICENSE)
 
 
 **个人在线知识维基文档**
@@ -16,11 +16,11 @@
 </div>
 
 > Recently update: 
-> - [What's in my Chrome Extensions](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Chrome-extensions)
-> - [What's in my Win10](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Win10)
-> - [What's in my Mac?](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Mac/)
-> - [What's in my Android](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-Android)
-> - [What's in my iPad](https://roseauhan.github.io/cookbook-material/app/Whats-in-my-iPad)
+> - [What's in my Chrome Extensions](https://roseauhan.github.io/cookbook/app/Whats-in-my-Chrome-extensions)
+> - [What's in my Win10](https://roseauhan.github.io/cookbook/app/Whats-in-my-Win10)
+> - [What's in my Mac?](https://roseauhan.github.io/cookbook/app/Whats-in-my-Mac/)
+> - [What's in my Android](https://roseauhan.github.io/cookbook/app/Whats-in-my-Android)
+> - [What's in my iPad](https://roseauhan.github.io/cookbook/app/Whats-in-my-iPad)
 
 
 ## 😋这是什么？
@@ -28,7 +28,7 @@
 ### 个人的在线知识库，采用GPL协议，欢迎👏PR
 
 ```
-https://roseauhan.github.io/cookbook-material/
+https://roseauhan.github.io/cookbook/
 ```
 
 ![](https://i.loli.net/2019/08/09/Z9iGLzEN7bmJgsx.png)
@@ -55,7 +55,7 @@ Material is a theme for MkDocs, an excellent static site generator geared toward
 
 - Mkdocs提供了很好的[在线部署支持](https://www.mkdocs.org/user-guide/deploying-your-docs/#deploying-your-docs)，只需要
 `mkdocs gh-deploy`
-一个简单的命令就可以部署在Github pages上。目前该项目除了部署在[GitHub Pages](https://roseauhan.github.io/cookbook-material/)，还部署在[readthedoc](https://roseau-cookbook.readthedocs.io)一份，这个只能采用readthedoc默认的主题。
+一个简单的命令就可以部署在Github pages上。目前该项目除了部署在[GitHub Pages](https://roseauhan.github.io/cookbook/)，还部署在[readthedoc](https://roseau-cookbook.readthedocs.io)一份，这个只能采用readthedoc默认的主题。
 
 - ⚑ 之后我会写一篇详细的部署指南。
 
@@ -64,7 +64,7 @@ Material is a theme for MkDocs, an excellent static site generator geared toward
 
 ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/ScreenShot.png)
 - 点击文中这个按钮，就可以直接编辑。
-- 或者直接向我 [pull request](https://github.com/RoseauHan/cookbook-material/)
+- 或者直接向我 [pull request](https://github.com/RoseauHan/cookbook/)
 
 📒 **Cookbook** ©roseauhan. Released under the GPL License.
 
