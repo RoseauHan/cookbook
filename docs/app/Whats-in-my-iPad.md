@@ -24,7 +24,7 @@ lastUpdate: 2019-8-16
 
 [TOC]
 
-Feel free to [**star**](https://github.com/RoseauHan/cookbook-material/) and [**fork**](https://github.com/RoseauHan/cookbook-material/).
+Feel free to [**star**](https://github.com/RoseauHan/cookbook/) and [**fork**](https://github.com/RoseauHan/cookbook/).
 
 ### 📝Note that
 

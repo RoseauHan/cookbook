@@ -11,14 +11,14 @@ nav:
 
 
 # Project information
-site_name: 'Cookbook-roseau'
+site_name: 'Cookbook'
 site_description: 'roseau knowledge database.'
 site_author: 'roseauhan'
-site_url: 'https://roseauhan.github.io/cookbook-material/'
+site_url: 'https://roseauhan.github.io/cookbook/'
 
 # Repository
-repo_name: 'Cookbook-roseau'
-repo_url: 'https://github.com/RoseauHan/cookbook-material'
+repo_name: 'Cookbook'
+repo_url: 'https://github.com/RoseauHan/cookbook/'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 - 2019 roseauhan'

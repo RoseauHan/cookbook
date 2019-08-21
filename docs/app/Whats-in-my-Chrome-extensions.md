@@ -23,7 +23,7 @@ This ia a list of my own personal Chrome extensions, including 3 categories:
 
 [TOC]
 
-Feel free to [**star**](https://github.com/RoseauHan/cookbook-material/) and [**fork**](https://github.com/RoseauHan/cookbook-material/).
+Feel free to [**star**](https://github.com/RoseauHan/cookbook/) and [**fork**](https://github.com/RoseauHan/cookbook/).
 
 ### 📝Note that
 
