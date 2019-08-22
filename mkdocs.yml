@@ -8,6 +8,7 @@ nav:
   - iPad App: app/Whats-in-my-iPad.md
   - Android App: app/Whats-in-my-Android.md
   - Chrome Extensions: app/Whats-in-my-Chrome-extensions.md
+  - Tampermonkey scripts: app/Whats-in-my-tampermonkey.md
 
 
 # Project information
