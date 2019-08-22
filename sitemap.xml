@@ -2,32 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://roseauhan.github.io/cookbook/</loc>
-     <lastmod>2019-08-21</lastmod>
+     <lastmod>2019-08-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-Mac/</loc>
-     <lastmod>2019-08-21</lastmod>
+     <lastmod>2019-08-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-Win10/</loc>
-     <lastmod>2019-08-21</lastmod>
+     <lastmod>2019-08-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-iPad/</loc>
-     <lastmod>2019-08-21</lastmod>
+     <lastmod>2019-08-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-Android/</loc>
-     <lastmod>2019-08-21</lastmod>
+     <lastmod>2019-08-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-Chrome-extensions/</loc>
-     <lastmod>2019-08-21</lastmod>
+     <lastmod>2019-08-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-tampermonkey/</loc>
+     <lastmod>2019-08-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
