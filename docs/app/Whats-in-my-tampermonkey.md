@@ -16,7 +16,7 @@ summary: record and share my own tampermonkey scripts
 date: 2019-08-22
 lastUpdate: 2019-8-22
 ```
-![](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/Miov9a.png)
+![](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/QKoXKZ.png)
 
 This ia a list of my own personal tampermonkey scripts , including 4 categories:
 
@@ -76,5 +76,5 @@ The charming of tampermobkey actually is the charming of Script. As we all know,
 | 再见了百家号搜索结果 |               *删除百度搜索结果的百家号的结果*               | [再见了百家号搜索结果](https://greasyfork.org/zh-CN/scripts/41037-%E5%86%8D%E8%A7%81%E4%BA%86%E7%99%BE%E5%AE%B6%E5%8F%B7%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C) |
 |   百度文库界面清理   |     *清除百度文库界面上多余节点，给你一个清爽的阅读环境*     | [百度文库界面清理](https://greasyfork.org/zh-CN/scripts/30024-%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93%E7%95%8C%E9%9D%A2%E6%B8%85%E7%90%86) |
 |     知乎排版优化     | *去掉知乎右边栏,文字排版居中,阅读更友好,使用ctrl+'+'放大页面后效果更佳.* | [知乎排版优化](https://greasyfork.org/zh-CN/scripts/21659-%E7%9F%A5%E4%B9%8E%E6%8E%92%E7%89%88%E4%BC%98%E5%8C%96) |
-|   知乎回答排序插件   | *安装插件后，问题功能栏会多出两个按钮 * 按赞同数排序 * 按评论数排序* | [知乎回答排序](https://greasyfork.org/zh-CN/scripts/30295-%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94%E6%8E%92%E5%BA%8F%E6%8F%92%E4%BB%B6) |
+|   知乎回答排序插件   | *安装插件后，问题功能栏会多出两个按钮 :按赞同数排序 ,按评论数排序* | [知乎回答排序](https://greasyfork.org/zh-CN/scripts/30295-%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94%E6%8E%92%E5%BA%8F%E6%8F%92%E4%BB%B6) |
 
