@@ -22,7 +22,7 @@ repo_name: 'Cookbook'
 repo_url: 'https://github.com/RoseauHan/cookbook/'
 
 # Copyright
-copyright: 'Copyright &copy; 2018 - 2019 roseauhan'
+copyright: 'Copyright &copy; 2019 roseauhan'
 
 # Configuration
 theme:
