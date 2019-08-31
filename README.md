@@ -56,15 +56,15 @@ I will share different kinds of note in my learning process , *including front-e
 - Mainly using  [MkDocs](https://github.com/mkdocs/mkdocs/) -Project documentation with Markdown.
 
 
-```
-MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
-```
+> MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
 
 
 - The default theme of *mkdocs* is ugly，so I choose to use [Material theme](https://squidfunk.github.io/mkdocs-material/).
-```
-Material is a theme for MkDocs, an excellent static site generator geared towards project documentation. It is built using Google's Material Design guidelines.
-```
+
+
+> Material is a theme for MkDocs, an excellent static site generator geared towards project documentation. It is built using Google's Material Design guidelines.
+
+
 just a simple command `mkdocs gh-deploy`, then you can deploy it in Github pages. Now this project is deployed not only [GitHub Pages](https://roseauhan.github.io/cookbook/)，but also [readthedoc](https://roseau-cookbook.readthedocs.io)，but the readthedoc version can only using the default theme.
 
 
