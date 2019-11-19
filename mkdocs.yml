@@ -10,6 +10,9 @@ nav:
   - Chrome Extensions: app/Whats-in-my-Chrome-extensions.md
   - Tampermonkey scripts: app/Whats-in-my-tampermonkey.md
 
+- Machine Learning:
+  - Machine learning tool chain: machine_learning/tool_chain.md 
+
 
 # Project information
 site_name: 'Cookbook'
