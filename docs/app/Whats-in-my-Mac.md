@@ -4,7 +4,7 @@ summary: record and share my own Mac applications.
 authors:
     - roseau
 date: 2019-08-13
-lastUpdate: 2019-10-12
+lastUpdate: 2019-11-19
 ---
 
 # What's in my Mac  ?
@@ -15,7 +15,7 @@ summary: record and share my own Mac applications.
 authors:
     - roseau
 date: 2019-08-13
-lastUpdate: 2019-10-12
+lastUpdate: 2019-11-19
 ```
 ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/wwZ9Uf.png)
 
