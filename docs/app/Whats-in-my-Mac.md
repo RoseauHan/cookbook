@@ -4,7 +4,7 @@ summary: record and share my own Mac applications.
 authors:
     - roseau
 date: 2019-08-13
-lastUpdate: 2019-11-19
+lastUpdate: 2019-11-24
 ---
 
 # What's in my Mac  ?
@@ -15,7 +15,7 @@ summary: record and share my own Mac applications.
 authors:
     - roseau
 date: 2019-08-13
-lastUpdate: 2019-11-19
+lastUpdate: 2019-11-24
 ```
 ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/wwZ9Uf.png)
 
@@ -73,6 +73,7 @@ Feel free to [**star**](https://github.com/RoseauHan/cookbook/) and [**fork**](h
 | ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/ZHwhMi.png) |                              💰                               | *It cleans megatons of junk and makes your computer run faster.* |                `brew cask install cleanmymac`                |          |
 | ![](https://raw.githubusercontent.com/RoseauHan/upic/master/6rolTX.png) | [![Freeware](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667)](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667) | *From work to play, To Do is the way to get stuff done every day. Cross platfrom and cloud storage by Microsoft* |          [To Do](https://todo.microsoft.com/en-us)           |          |
 | ![](https://raw.githubusercontent.com/RoseauHan/upic/master/wypVGt.png) | [![Freeware](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667)](https://camo.githubusercontent.com/5b5710d91294db78c7e32ffa884d6c45ab15c471/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d667265652e737667)[![Open-Source Software](https://camo.githubusercontent.com/27b0c862bc5dee3cc822a00c0645f66104a583b0/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d6f73732e737667)](https://camo.githubusercontent.com/27b0c862bc5dee3cc822a00c0645f66104a583b0/68747470733a2f2f6a617977636a6c6f76652e6769746875622e696f2f73622f69636f2f6d696e2d6f73732e737667) |          *Freedom is something worth fighting for.*          | [Shadowsocks-NG](https://github.com/shadowsocks/ShadowsocksX-NG) |          |
+| ![](https://raw.githubusercontent.com/RoseauHan/upic/master/JaqTGw.png) |                              💰                               |          *Delightful GIF Recording and Sharing App*          |                  [Gifox](https://gifox.io/)                  |          |
 
 
 
