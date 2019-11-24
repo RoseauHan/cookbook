@@ -18,13 +18,13 @@
 </div>
 
 > Recently update: 
+
+> - [How to Google correctly](https://roseauhan.github.io/cookbook/basic_knowledge/how_to_google)
 > - [Machine learning tool chain](https://roseauhan.github.io/cookbook/machine_learning/tool_chain)
 > - [What's in my tampermonkey Scripts](https://roseauhan.github.io/cookbook/app/Whats-in-my-tampermonkey)
 > - [What's in my Chrome Extensions](https://roseauhan.github.io/cookbook/app/Whats-in-my-Chrome-extensions)
 > - [What's in my Win10](https://roseauhan.github.io/cookbook/app/Whats-in-my-Win10)
 > - [What's in my Mac?](https://roseauhan.github.io/cookbook/app/Whats-in-my-Mac/)
-> - [What's in my Android](https://roseauhan.github.io/cookbook/app/Whats-in-my-Android)
-> - [What's in my iPad](https://roseauhan.github.io/cookbook/app/Whats-in-my-iPad)
 
 
 

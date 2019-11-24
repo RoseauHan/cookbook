@@ -10,8 +10,13 @@ nav:
   - Chrome Extensions: app/Whats-in-my-Chrome-extensions.md
   - Tampermonkey scripts: app/Whats-in-my-tampermonkey.md
 
+- Basic Knowledge:
+  - How to Google: basic_knowledge/how_to_google.md
+
 - Machine Learning:
   - Machine learning tool chain: machine_learning/tool_chain.md 
+
+
 
 
 # Project information
