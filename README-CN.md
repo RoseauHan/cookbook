@@ -16,7 +16,7 @@
 </div>
 
 > Recently update: 
-
+> - [Learn double pinyin right now](https://roseauhan.github.io/cookbook/basic_knowledge/double_pinyin)
 > - [How to Google correctly](https://roseauhan.github.io/cookbook/basic_knowledge/how_to_google)
 > - [Machine learning tool chain](https://roseauhan.github.io/cookbook/machine_learning/tool_chain)
 > - [What's in my tampermonkey Scripts](https://roseauhan.github.io/cookbook/app/Whats-in-my-tampermonkey)
