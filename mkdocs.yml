@@ -14,8 +14,10 @@ nav:
   - How to Google: basic_knowledge/how_to_google.md
   - Learn double pinyin right now: basic_knowledge/double_pinyin.md
 
-- Machine Learning:
-  - Machine learning tool chain: machine_learning/tool_chain.md 
+- Data Science:
+  - data science intro: data_science/data_science_intro.md
+  - IPython intro: data_science/IPython_intro.md 
+  - Data Science tool chain: data_science/tool_chain.md 
 
 
 

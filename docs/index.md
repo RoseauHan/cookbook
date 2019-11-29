@@ -17,8 +17,10 @@
 
 ***Personal Knowledge Database wiki Library***
 
-> Recently update: 
+> Recently update:
 
+> - [data science intro](https://roseauhan.github.io/cookbook/data_science/data_science_intro)
+> - [IPython intro](https://roseauhan.github.io/cookbook/data_science/ipython_intro)
 > - [Learn double pinyin right now](https://roseauhan.github.io/cookbook/basic_knowledge/double_pinyin)
 > - [How to Google correctly](https://roseauhan.github.io/cookbook/basic_knowledge/how_to_google)
 > - [Machine learning tool chain](https://roseauhan.github.io/cookbook/machine_learning/tool_chain)
