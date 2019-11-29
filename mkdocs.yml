@@ -17,6 +17,7 @@ nav:
 - Data Science:
   - data science intro: data_science/data_science_intro.md
   - IPython intro: data_science/IPython_intro.md 
+  - NumPy intro: data_science/numpy_intro.md
   - Data Science tool chain: data_science/tool_chain.md 
 
 
