@@ -1,0 +1,1140 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="roseau knowledge database.">
+      
+      
+        <link rel="canonical" href="https://roseauhan.github.io/cookbook/data_science/numpy_intro/">
+      
+      
+        <meta name="author" content="roseauhan">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>NumPy intro - Cookbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../../manifest.webmanifest">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#numpy" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://roseauhan.github.io/cookbook/" title="Cookbook" class="md-header-nav__button md-logo">
+          
+            <img src="https://i.loli.net/2019/08/11/ZNIuBreOtdp1XjG.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Cookbook
+            </span>
+            <span class="md-header-nav__topic">
+              
+                NumPy intro
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/RoseauHan/cookbook/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Cookbook
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Cookbook
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../app/Whats-in-my-Mac/" class="md-tabs__link">
+          App
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../basic_knowledge/how_to_google/" class="md-tabs__link">
+          Basic Knowledge
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../data_science_intro/" class="md-tabs__link md-tabs__link--active">
+          Data Science
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://roseauhan.github.io/cookbook/" title="Cookbook" class="md-nav__button md-logo">
+      
+        <img src="https://i.loli.net/2019/08/11/ZNIuBreOtdp1XjG.png" width="48" height="48">
+      
+    </a>
+    Cookbook
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/RoseauHan/cookbook/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Cookbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Cookbook" class="md-nav__link">
+      Cookbook
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      App
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        App
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-Mac/" title="Mac App" class="md-nav__link">
+      Mac App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-Win10/" title="Win10 App" class="md-nav__link">
+      Win10 App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-iPad/" title="iPad App" class="md-nav__link">
+      iPad App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-Android/" title="Android App" class="md-nav__link">
+      Android App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-Chrome-extensions/" title="Chrome Extensions" class="md-nav__link">
+      Chrome Extensions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-tampermonkey/" title="Tampermonkey scripts" class="md-nav__link">
+      Tampermonkey scripts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Basic Knowledge
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Basic Knowledge
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic_knowledge/how_to_google/" title="How to Google" class="md-nav__link">
+      How to Google
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic_knowledge/double_pinyin/" title="Learn double pinyin right now" class="md-nav__link">
+      Learn double pinyin right now
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data_science_intro/" title="data science intro" class="md-nav__link">
+      data science intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IPython_intro/" title="IPython intro" class="md-nav__link">
+      IPython intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        NumPy intro
+      </label>
+    
+    <a href="./" title="NumPy intro" class="md-nav__link md-nav__link--active">
+      NumPy intro
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numpy_1" class="md-nav__link">
+    一、Numpy简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    二、理解Python中的数据类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numpy_2" class="md-nav__link">
+    三、NumPy数组基础
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1、数组的属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、数组索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、数组变形
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4、数组的拼接和变形
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numpy_3" class="md-nav__link">
+    四、NumPy数组的计算：通用函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    五、聚合：最小值、最大值和其他值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broadcast" class="md-nav__link">
+    六、数组的计算：广播broadcast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    七、比较、掩码和布尔逻辑
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fancy-indexing" class="md-nav__link">
+    八、花哨的数组 fancy indexing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    九、其他资料
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tool_chain/" title="Data Science tool chain" class="md-nav__link">
+      Data Science tool chain
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numpy_1" class="md-nav__link">
+    一、Numpy简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    二、理解Python中的数据类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numpy_2" class="md-nav__link">
+    三、NumPy数组基础
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1、数组的属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、数组索引
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、数组变形
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4、数组的拼接和变形
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numpy_3" class="md-nav__link">
+    四、NumPy数组的计算：通用函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    五、聚合：最小值、最大值和其他值
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broadcast" class="md-nav__link">
+    六、数组的计算：广播broadcast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    七、比较、掩码和布尔逻辑
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fancy-indexing" class="md-nav__link">
+    八、花哨的数组 fancy indexing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    九、其他资料
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/RoseauHan/cookbook/edit/master/docs/data_science/numpy_intro.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="numpy">NumPy 入门<a class="headerlink" href="#numpy" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span>title: NumPy intro
+summary: NumPy feature summary
+authors:
+   - roseau
+date: 2019-11-29
+lastUpdate: 2019-11-29
+</pre></div>
+
+<blockquote>
+<p>本文主要参考自 <em>Python Data Science Handbook by Jake VanderPlas (O’Reilly).Copyright 2017 Jake VanderPlas,978-1-491-91205-8</em></p>
+</blockquote>
+<h3 id="numpy_1">一、Numpy简介<a class="headerlink" href="#numpy_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>NumPy是Python语言的一个扩展程序库。支持高端大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/1200px-NumPy_logo.svg.png" style="zoom: 33%;" /></p>
+<p>NumPy引入了多维数组以及可以直接有效率地操作多维数组的函数与运算符。因此在NumPy上只要能被表示为针对数组或矩阵运算的算法，其运行效率几乎都可以与编译过的等效C语言代码一样快。</p>
+<p>NumPy提供了高效存储和操作密集数据缓存的接口。在某些方面，NumPy数组与Python内置的列表类型非常相似。但是随着数组在维度上的变大，NumPy提供了更加高效的存储和数据操作。<strong>NumPy几乎是整个Python数据科学工具生态系统的核心。</strong></p>
+<p>一般来说，我们使用<code>import numpy as np</code>来使用NumPy。</p>
+<h3 id="python">二、理解Python中的数据类型<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<p>Python为了获得灵活的类型，列表中的每一项都必须包含各自的类型信息，也就是，每一项都是一个完整的Python对象。</p>
+<p>不同于Python列表，<strong>Numpy要求数组必须包含同一类型的数据</strong>。如果类型不匹配，NumPy将会向上转换。如果希望明确设置数组的数据类型，可以用<code>dtype</code>关键字：</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float32</span><span class="p">)</span>
+</pre></div>
+
+<p>最后，不同于Python列表，NumPy可以被指定为多维的。</p>
+<p>面对大型数组的时候，用numpy内置的方法从头创建数组是一种更高效的方法，示例如下：</p>
+<div class="codehilite"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="err">创建一个长度为</span><span class="mi">10</span><span class="err">的数组，数组的值都是</span><span class="mi">0</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">Out</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="c1"># 创建一个3×5的浮点型数组，数组的值都是1</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="n">Out</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">],</span>
+                <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">],</span>
+                <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]])</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="c1"># 创建一个3×5的浮点型数组，数组的值都是3.14</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mf">3.14</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span> <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">],</span>
+                <span class="p">[</span> <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">],</span>
+                <span class="p">[</span> <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">,</span>  <span class="mf">3.14</span><span class="p">]])</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="c1"># 创建一个3×5的浮点型数组，数组的值是一个线性序列</span>
+        <span class="c1"># 从0开始，到20结束，步长为2</span>
+        <span class="c1"># （它和内置的range()函数类似）</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">Out</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="n">array</span><span class="p">([</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">])</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span> <span class="c1"># 创建一个5个元素的数组，这5个数均匀地分配到0~1</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">Out</span><span class="p">[</span><span class="mi">16</span><span class="p">]:</span> <span class="n">array</span><span class="p">([</span> <span class="mf">0.</span>  <span class="p">,</span>  <span class="mf">0.25</span><span class="p">,</span>  <span class="mf">0.5</span> <span class="p">,</span>  <span class="mf">0.75</span><span class="p">,</span>  <span class="mf">1.</span> <span class="p">])</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">]:</span> <span class="c1"># 创建一个3×3的、在0~1均匀分布的随机数组成的数组</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">Out</span><span class="p">[</span><span class="mi">17</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span> <span class="mf">0.99844933</span><span class="p">,</span>  <span class="mf">0.52183819</span><span class="p">,</span>  <span class="mf">0.22421193</span><span class="p">],</span>
+                <span class="p">[</span> <span class="mf">0.08007488</span><span class="p">,</span>  <span class="mf">0.45429293</span><span class="p">,</span>  <span class="mf">0.20941444</span><span class="p">],</span>
+                <span class="p">[</span> <span class="mf">0.14360941</span><span class="p">,</span>  <span class="mf">0.96910973</span><span class="p">,</span>  <span class="mf">0.946117</span> <span class="p">]])</span>
+
+
+<span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">]:</span> <span class="c1"># 创建一个3×3的、均值为0、方差为1的</span>
+        <span class="c1"># 正态分布的随机数数组</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">Out</span><span class="p">[</span><span class="mi">18</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span> <span class="mf">1.51772646</span><span class="p">,</span>  <span class="mf">0.39614948</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.10634696</span><span class="p">],</span>
+                <span class="p">[</span> <span class="mf">0.25671348</span><span class="p">,</span>  <span class="mf">0.00732722</span><span class="p">,</span>  <span class="mf">0.37783601</span><span class="p">],</span><span class="err">”</span>
+
+<span class="err">“</span>                <span class="p">[</span> <span class="mf">0.68446945</span><span class="p">,</span>  <span class="mf">0.15926039</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.70744073</span><span class="p">]])</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">]:</span> <span class="c1"># 创建一个3×3的、[0, 10)区间的随机整型数组</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">Out</span><span class="p">[</span><span class="mi">19</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">]:</span> <span class="c1"># 创建一个3×3的单位矩阵</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">Out</span><span class="p">[</span><span class="mi">20</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">],</span>
+                <span class="p">[</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">],</span>
+                <span class="p">[</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]])</span>
+
+<span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">]:</span> <span class="c1"># 创建一个由3个整型数组成的未初始化的数组</span>
+        <span class="c1"># 数组的值是内存空间中的任意值</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">Out</span><span class="p">[</span><span class="mi">21</span><span class="p">]:</span> <span class="n">array</span><span class="p">([</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">])</span><span class="err">”</span>
+
+<span class="n">Excerpt</span> <span class="n">From</span><span class="p">:</span> <span class="p">[</span><span class="err">美</span><span class="p">]</span> <span class="n">Jake</span> <span class="n">VanderPlas</span><span class="o">.</span> <span class="err">“</span><span class="n">Python数据科学手册</span><span class="o">.</span><span class="err">”</span> <span class="n">Apple</span> <span class="n">Books</span><span class="o">.</span> 
+</pre></div>
+
+<h3 id="numpy_2">三、NumPy数组基础<a class="headerlink" href="#numpy_2" title="Permanent link">&para;</a></h3>
+<p>Python 中的数据操作几乎等同于 NumPy 数组操作，甚至新出现的 Pandas 工具（之后介绍）也是构建在 NumPy 数组的基础之上的。</p>
+<h4 id="1">1、数组的属性<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ndim 数组维度</li>
+<li>shape 数组每个维度的大小</li>
+<li>size 数组的大小</li>
+<li>dtype 数组的数据类型</li>
+</ul>
+<h4 id="2">2、数组索引<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>中括号指定索引值</li>
+<li>多维数组中，采用逗号分隔的索引元组</li>
+<li>数组切片：x[start:stop:step]</li>
+<li>空切片 ( : ) 用来获取数组的行和列</li>
+<li><strong>数组切片返回的是数组数据的视图，如果修改子数组，原始数组也被修改</strong></li>
+<li>利用 copy() 明确复制数据，此时子数组对原始数组无影响</li>
+</ul>
+<h4 id="3">3、数组变形<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>reshape（）实现灵活的数组变形</li>
+<li>利用 newaxis 关键字将一个一维数组转变为二维的行或列的矩阵</li>
+</ul>
+<h4 id="4">4、数组的拼接和变形<a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>拼接或连接两个数组：np.concatenate np.vstack np.hstack </p>
+</li>
+<li>
+<p>分裂：np.split np.hsplit np.vsplit，参数为索引列表，记录分裂点的位置</p>
+</li>
+</ul>
+<h3 id="numpy_3">四、NumPy数组的计算：通用函数<a class="headerlink" href="#numpy_3" title="Permanent link">&para;</a></h3>
+<p>NumPy 为很多类型的操作提供了非常方便的、静态类型的、可编译程序的接口，也被称作向量操作。你可以通过简单地对数组执行操作来实现，这里对数组的操作将会被用于数组中的每一个元素。这种向量方法被用于将循环推送至 NumPy 之下的编译层，这样会取得更快的执行效率。</p>
+<p>通过通用函数用向量的方式进行计算几乎总比用 Python 循环实现的计算更加有效，尤其是当数组很大时。只要你看到 Python 脚本中有这样的循环，就应该考虑能否用向量方式替换这个循环。</p>
+<ul>
+<li>数组的运算：标准的加减乘除、逻辑非、<code>**</code> 表示的指数运算和<code>%</code>表示的模运算</li>
+<li>绝对值 np.abs()</li>
+<li>三角函数</li>
+<li>指数和对数</li>
+<li>很多通用函数，包括双曲三角函数、比特位运算、比较运算符、弧度转化为角度的运算、取整和求余运算，等等。</li>
+<li>还有一个更加专用，也更加晦涩的通用函数优异来源是子模块 scipy.special。如果你希望对你的数据进行一些更晦涩的数学计算，scipy.special 可能包含了你需要的计算函数”</li>
+</ul>
+<p>高级的通用函数特性：</p>
+<ul>
+<li>
+<p>指定输出：所有通用函数都可通过out参数来指定计算结果存放的位置</p>
+</li>
+<li>
+<p>聚合：一个reduce方法会对给定的元素和操作重复执行，直至得到单个的结果，如果需要存放每次计算的中间结果，可以使用accumulate。在一些特殊情况中，NumPy提供了专用的函数（np.sum、np.prod、np.cumsum、np.cumprod ），它们也可以实现以上 reduce 的功能</p>
+</li>
+<li>
+<p>任何通用函数都可以用 outer 方法获得两个不同输入数组所有元素对的函数运算结果。</p>
+</li>
+</ul>
+<h3 id="_1">五、聚合：最小值、最大值和其他值<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>NumPy 有非常快速的内置聚合函数可用于数组：</p>
+<ul>
+<li>数组值求和：np.sum</li>
+<li>最小值和最大值：np.min np.max </li>
+<li>多维度聚合：聚合函数参数axis可以指定沿着哪个轴的方向进行聚合</li>
+</ul>
+<p>Numpy中可用的聚合函数：
+函数名称    NaN安全版本 描述
+np.sum  np.nansum   计算元素的和
+np.prod np.nanprod  计算元素的积
+np.mean np.nanmean  计算元素的平均值
+np.std  np.nanstd   计算元素的标准差
+np.var  np.nanvar   计算元素的方差
+np.min  np.nanmin   找出最小值
+np.max  np.nanmax   找出最大值
+np.argmin   np.nanargmin    找出最小值的索引
+np.argmax   np.nanargmax    找出最大值的索引
+np.median   np.nanmedian    计算元素的中位数
+np.percentile   np.nanpercentile    计算基于元素排序的统计值
+np.any  N/A 验证任何一个元素是否为真
+np.all  N/A 验证所有元素是否为真</p>
+<h3 id="broadcast">六、数组的计算：广播broadcast<a class="headerlink" href="#broadcast" title="Permanent link">&para;</a></h3>
+<p>广播可以简单理解为用于不同大小数组的二进制通用函数（加、减、乘等）的一组规则。</p>
+<p><img alt="" src="https://raw.githubusercontent.com/RoseauHan/upic/master/31rD3t.png" /></p>
+<p>广播的规则：</p>
+<ul>
+<li>如果两个数组的维度数不相同，那么小维度数组的形状将会在最左边补 1。</li>
+<li>如果两个数组的形状在任何一个维度上都不匹配，那么数组的形状会沿着维度为 1 的维度扩展以匹配另外一个数组的形状。</li>
+<li>如果两个数组的形状在任何一个维度上都不匹配并且没有任何一个维度等于 1，那么会引发异常</li>
+</ul>
+<h3 id="_2">七、比较、掩码和布尔逻辑<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>NumPy 还实现了如 &lt;（小于）和 &gt;（大于）的逐元素比较的通用函数。</li>
+<li>利用布尔数组统计记录的个数</li>
+<li>
+<p>np.all() 和np.any() 也可以用于沿着特定的坐标轴</p>
+</li>
+<li>
+<p>利用布尔运算符</p>
+</li>
+<li>将布尔数组作为掩码，通过掩码选择数据的字数据集</li>
+<li>and 和 or 判断整个对象是真或假，而 &amp; 和 | 是指每个对象中的比特位。</li>
+</ul>
+<h3 id="fancy-indexing">八、花哨的数组 fancy indexing<a class="headerlink" href="#fancy-indexing" title="Permanent link">&para;</a></h3>
+<p>花哨的索引和前面那些简单的索引非常类似，但是传递的是索引数组，而不是单个标量。花哨的索引让我们能够快速获得并修改复杂的数组值的子数据集。</p>
+<p>利用花哨的索引，结果的形状与索引数组的形状一致，而不是与被索引数组的形状一致。</p>
+<p>花哨的索引可以和其他索引方案结合起来形成更强大的索引操作。</p>
+<p>花哨的索引的一个常见用途是从一个矩阵中选择行的子集</p>
+<h3 id="_3">九、其他资料<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>NumPy的核心功能是"ndarray"(即n-dimensional array，多维数组)数据结构。这是一个表示多维度、同质并且固定大小的数组对象。而由一个与此数组相关系的数据类型对象来描述其数组元素的数据格式(例如其字符组顺序、在存储器中占用的字符组数量、整数或者浮点数等等)。</p>
+<ol>
+<li><a href="https://numpy.org"><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_web.png" alt="web" style="zoom:15%;" /> https://numpy.org</a></li>
+<li><a href="https://numpy.org/devdocs/user/quickstart.html"><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_doc.png" alt="docu" style="zoom:15%;" /> Quickstart tutorial </a></li>
+<li><a href="https://scipy.org/install.html"><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_en_doc.png" alt="en_doc" style="zoom:15%;" /> 安装文档</a></li>
+<li><a href="https://numpy.org/devdocs/"><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_en_doc.png" alt="en_doc" style="zoom:15%;" /> numpy devdocs</a></li>
+<li><a href="https://github.com/numpy/numpy"><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_git.png" alt="git" style="zoom:15%;" /> NumPy </a></li>
+<li><a href="https://zh.wikipedia.org/zh-cn/NumPy"><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_wiki.png" alt="wiki" style="zoom:15%;" /> NumPy</a></li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://roseauhan.github.io/cookbook/data_science/numpy_intro/";
+      this.page.identifier =
+        "data_science/numpy_intro/";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//roseauhan.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../IPython_intro/" title="IPython intro" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                IPython intro
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../tool_chain/" title="Data Science tool chain" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Data Science tool chain
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 roseauhan
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/roseauhan" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/roseauhan" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://dribbble.com/roseauhan" class="md-footer-social__link fa fa-dribbble"></a>
+    
+      <a href="https://roseauhan.github.io" class="md-footer-social__link fa fa-rss"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
