@@ -18,6 +18,8 @@ date: 2019-11-29
 lastUpdate: 2019-11-29
 ```
 > 本文主要参考自 *Python Data Science Handbook by Jake VanderPlas (O’Reilly).Copyright 2017 Jake VanderPlas,978-1-491-91205-8*
+>
+> Github：https://github.com/jakevdp/PythonDataScienceHandbook
 
 ### 一、什么是数据科学？
 
@@ -41,9 +43,7 @@ lastUpdate: 2019-11-29
 
 还是在其他数据相关的领域中工作，我们都可以利用数据科学发现问题，并且具备解决问题的能力。
 
-### 二、利用Python进行研究
-
-#### 1、Python是什么？
+### 二、Python是什么？
 
 > Python是一种广泛使用的解释型、高级编程、通用型编程语言。
 
@@ -54,7 +54,7 @@ Python 是[龟叔](https://zh.wikipedia.org/wiki/吉多·范罗苏姆)于在1989
 *Guido为了打发圣诞节的无趣，决定开发一个新的解释型语言，由于他是Monty Python喜剧团体的爱好者，所以取名誉Python（巨蟒）。
 Python目前是由一个核心开发团队在开发与维护，Guido van Rossum 一直以来被称为Python[仁慈的独裁者](https://zh.wikipedia.org/zh-hans/终身仁慈独裁者)（Benevolent Dictator For Life），龟叔最近刚刚[宣布从Dropbox退休](https://twitter.com/gvanrossum/status/1189546865114529792)。*
 
-#### 2、为什么选择Python？
+### 三、为什么选择Python？
 
 Python由于其简单优雅的特点，吸引了大量的使用者。再加上最近几年机器学习、人工智能领域的大热，Python变得更为炙手可热。
 
@@ -79,7 +79,7 @@ Python之所以能在数据科学领域广泛使用，主要是由于它的第�
 6. [<img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_git.png" alt="git" style="zoom:15%;" /> Python](https://github.com/python)
 7. [<img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_wiki.png" alt="wiki" style="zoom:15%;" /> Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-#### 3、安装Python
+### 四、利用Anaconda安装Python
 
 安装Python其实很简单，安装上面给出的文档一步一步操作即可。虽然安装Python的方法有很多，但在数据科学方面，Anaconda发行版是一个不错的的选择。
 
@@ -107,3 +107,18 @@ Anaconda发行版有两种：
 4. [<img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_en_doc.png" alt="en_doc" style="zoom:15%;" />Conda Cheat sheet ](https://conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
 5. [<img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_git.png" alt="git" style="zoom:15%;" /> conda](https://github.com/conda/conda)
 6. [<img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_wiki.png" alt="wiki" style="zoom:15%;" /> conda](https://en.wikipedia.org/wiki/Conda_(package_manager))
+
+### 五、Anaconda 与 pip 的对比
+
+根据[anaconda官方的文档](https://www.anaconda.com/understanding-conda-and-pip/)，anaconda 与 pip 的主要区别如下：
+
+|                       | conda                   | pip                             |
+| :-------------------- | :---------------------- | :------------------------------ |
+| manages               | binaries                | wheel or source                 |
+| can require compilers | no                      | yes                             |
+| package types         | any                     | Python-only                     |
+| create environment    | yes, built-in           | no, requires virtualenv or venv |
+| dependency checks     | yes                     | no                              |
+| package sources       | Anaconda repo and cloud | PyPI                            |
+
+总结来说，anaconda提供了二进制的包，不存在编译过程，因此可以有很好的兼容性，同时还提供虚拟环境支持，这就是anaconda的核心优势。
