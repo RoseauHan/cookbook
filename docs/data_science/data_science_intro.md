@@ -4,7 +4,7 @@ summary: first step to data science
 authors:
    - roseau
 date: 2019-11-29
-lastUpdate: 2019-11-29
+lastUpdate: 2019-12-02
 ---
 
 # 数据科学概述
@@ -15,7 +15,7 @@ summary: first step to data science
 authors:
    - roseau
 date: 2019-11-29
-lastUpdate: 2019-11-29
+lastUpdate: 2019-12-02
 ```
 > 本文主要参考自 *Python Data Science Handbook by Jake VanderPlas (O’Reilly).Copyright 2017 Jake VanderPlas,978-1-491-91205-8*
 >
