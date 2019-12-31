@@ -1,44 +1,41 @@
 # document configuration
 nav:
-- Cookbook: index.md
+  - Cookbook: index.md
 
-- App:
-  - Mac App: app/Whats-in-my-Mac.md
-  - Win10 App: app/Whats-in-my-Win10.md
-  - iPad App: app/Whats-in-my-iPad.md
-  - Android App: app/Whats-in-my-Android.md
-  - Chrome Extensions: app/Whats-in-my-Chrome-extensions.md
-  - Tampermonkey scripts: app/Whats-in-my-tampermonkey.md
+  - App:
+      - Mac App: app/Whats-in-my-Mac.md
+      - Win10 App: app/Whats-in-my-Win10.md
+      - iPad App: app/Whats-in-my-iPad.md
+      - Android App: app/Whats-in-my-Android.md
+      - Chrome Extensions: app/Whats-in-my-Chrome-extensions.md
+      - Tampermonkey scripts: app/Whats-in-my-tampermonkey.md
 
-- Basic Knowledge:
-  - How to Google: basic_knowledge/how_to_google.md
-  - Learn double pinyin right now: basic_knowledge/double_pinyin.md
+  - Basic Knowledge:
+      - How to Google: basic_knowledge/how_to_google.md
+      - Learn double pinyin right now: basic_knowledge/double_pinyin.md
 
-- Data Science:
-  - data science intro: data_science/data_science_intro.md
-  - IPython intro: data_science/IPython_intro.md 
-  - NumPy intro: data_science/numpy_intro.md
-  - Data Science tool chain: data_science/tool_chain.md 
-
-
-
+  - Data Science:
+      - data science intro: data_science/data_science_intro.md
+      - IPython intro: data_science/IPython_intro.md
+      - NumPy intro: data_science/numpy_intro.md
+      - Data Science tool chain: data_science/tool_chain.md
 
 # Project information
-site_name: 'Cookbook'
-site_description: 'roseau knowledge database.'
-site_author: 'roseauhan'
-site_url: 'https://roseauhan.github.io/cookbook/'
+site_name: "Cookbook"
+site_description: "roseau knowledge database."
+site_author: "roseauhan"
+site_url: "https://roseauhan.github.io/cookbook/"
 
 # Repository
-repo_name: 'Cookbook'
-repo_url: 'https://github.com/RoseauHan/cookbook/'
+repo_name: "Cookbook"
+repo_url: "https://github.com/RoseauHan/cookbook/"
 
 # Copyright
-copyright: 'Copyright &copy; 2019 roseauhan'
+copyright: "Copyright &copy; 2019 roseauhan"
 
 # Configuration
 theme:
-  name: 'material'
+  name: "material"
   # Default values, taken from mkdocs_theme.yml
   language: en
   feature:
@@ -52,25 +49,24 @@ theme:
   # favicon: assets/images/favicon.ico
   logo: "https://i.loli.net/2019/08/11/ZNIuBreOtdp1XjG.png"
 
-
 # Customization
 extra:
-  disqus: 'roseauhan'
-  manifest: 'manifest.webmanifest'
+  disqus: "roseauhan"
+  manifest: "manifest.webmanifest"
   social:
-    - type: 'github-alt'
-      link: 'https://github.com/roseauhan'
-    - type: 'twitter'
-      link: 'https://twitter.com/roseauhan'
-    - type: 'dribbble'
-      link: 'https://dribbble.com/roseauhan'
-    - type: 'rss'
-      link: 'https://roseauhan.github.io'
+    - type: "github-alt"
+      link: "https://github.com/roseauhan"
+    - type: "twitter"
+      link: "https://twitter.com/roseauhan"
+    - type: "dribbble"
+      link: "https://dribbble.com/roseauhan"
+    - type: "rss"
+      link: "https://roseauhan.github.io"
 
 # Google Analytics
 google_analytics:
-  - 'UA-XXXXXXXX-X'
-  - 'auto'
+  - "UA-XXXXXXXX-X"
+  - "auto"
 
 # Extensions
 markdown_extensions:
@@ -97,3 +93,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+plugins:
+  - search
+  - git-revision-date-localized
