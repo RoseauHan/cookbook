@@ -1,12 +1,3 @@
----
-title: What's in my Chrome extensions ?
-summary: record and share my own Chrome extensions
-authors:
-    - roseau
-date: 2019-08-20
-lastUpdate: 2019-8-20
----
-
 # What's in my  Chrome Extensions ?
 
 ```

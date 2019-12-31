@@ -1,12 +1,3 @@
----
-title: What's in my Win10 ?
-summary: record and share my own Win10 applications.
-authors:
-    - roseau
-date: 2019-08-17
-lastUpdate: 2019-8-17
----
-
 # What's in my Win10  ?
 
 ```

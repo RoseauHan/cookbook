@@ -1,13 +1,3 @@
----
-title: What's in my Android ?
-summary: Record and share my android applications.
-authors:
-    - roseau
-date: 2019-08-15
-lastUpdate: 2019-10-12
-
----
-
 # What's in my Android 📱 ?
 
 ```

@@ -1,13 +1,3 @@
----
-title: ipython intro
-summary: ipython feature summary
-authors:
-   - roseau
-date: 2019-11-29
-lastUpdate: 2019-11-29
-
----
-
 # IPython: 超越Python
 
 ```

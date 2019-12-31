@@ -1,12 +1,3 @@
----
-kstitle: NumPy intro
-summary: NumPy feature summary
-authors:
-   - roseau
-date: 2019-11-29
-lastUpdate: 2019-11-29
----
-
 # NumPy 入门
 
 ```

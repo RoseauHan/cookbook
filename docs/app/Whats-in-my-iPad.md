@@ -1,12 +1,3 @@
----
-title: What's in my iPad ?
-summary: record and share my own iPad applications.
-authors:
-    - roseau
-date: 2019-08-16
-lastUpdate: 2019-8-16
----
-
 # What's in my iPad  ?
 
 ```

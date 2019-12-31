@@ -1,12 +1,3 @@
----
-title: data science intro
-summary: first step to data science
-authors:
-   - roseau
-date: 2019-11-29
-lastUpdate: 2019-12-02
----
-
 # 数据科学概述
 
 ```

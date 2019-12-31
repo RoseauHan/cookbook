@@ -17,18 +17,6 @@
 
 </div>
 
-> Recently update: 
-> - [NumPy intro](https://roseauhan.github.io/cookbook/data_science/numpy_intro)
-> - [data science intro](https://roseauhan.github.io/cookbook/data_science/data_science_intro)
-> - [IPython intro](https://roseauhan.github.io/cookbook/data_science/ipython_intro)
-> - [Learn double pinyin right now](https://roseauhan.github.io/cookbook/basic_knowledge/double_pinyin)
-> - [How to Google correctly](https://roseauhan.github.io/cookbook/basic_knowledge/how_to_google)
-> - [Machine learning tool chain](https://roseauhan.github.io/cookbook/machine_learning/tool_chain)
-> - [What's in my tampermonkey Scripts](https://roseauhan.github.io/cookbook/app/Whats-in-my-tampermonkey)
-> - [What's in my Chrome Extensions](https://roseauhan.github.io/cookbook/app/Whats-in-my-Chrome-extensions)
-
-
-
 
 ## 😋What's this？
 

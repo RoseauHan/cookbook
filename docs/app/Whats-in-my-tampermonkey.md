@@ -1,12 +1,3 @@
----
-title: What's in my tampermonkey ?
-summary: record and share my own tampermonkey scripts
-authors:
-    - roseau
-date: 2019-08-22
-lastUpdate: 2019-8-22
----
-
 # What's in my tampermonkey ?
 
 ```

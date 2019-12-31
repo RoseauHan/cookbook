@@ -1,12 +1,3 @@
----
-title: Learn double pinyin right now.
-summary: double pinyin save your time.
-authors:
-   - roseau
-date: 2019-11-28
-lastUpdate: 2019-11-28
----
-
 # 现在开始使用双拼
 
 ```
