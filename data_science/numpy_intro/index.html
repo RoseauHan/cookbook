@@ -37,7 +37,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
     
     
@@ -68,7 +68,7 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
-      <link rel="manifest" href="../../manifest.webmanifest">
+      <link rel="manifest" href="../../assets/manifest.webmanifest">
     
     
     
@@ -545,21 +545,21 @@
       
         <li class="md-nav__item">
   <a href="#numpy_1" class="md-nav__link">
-    一、Numpy简介
+    一、Numpy 简介
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#python" class="md-nav__link">
-    二、理解Python中的数据类型
+    二、理解 Python 中的数据类型
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#numpy_2" class="md-nav__link">
-    三、NumPy数组基础
+    三、NumPy 数组基础
   </a>
   
     <nav class="md-nav">
@@ -600,7 +600,7 @@
       
         <li class="md-nav__item">
   <a href="#numpy_3" class="md-nav__link">
-    四、NumPy数组的计算：通用函数
+    四、NumPy 数组的计算：通用函数
   </a>
   
 </li>
@@ -614,7 +614,7 @@
       
         <li class="md-nav__item">
   <a href="#broadcast" class="md-nav__link">
-    六、数组的计算：广播broadcast
+    六、数组的计算：广播 broadcast
   </a>
   
 </li>
@@ -696,21 +696,21 @@
       
         <li class="md-nav__item">
   <a href="#numpy_1" class="md-nav__link">
-    一、Numpy简介
+    一、Numpy 简介
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#python" class="md-nav__link">
-    二、理解Python中的数据类型
+    二、理解 Python 中的数据类型
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#numpy_2" class="md-nav__link">
-    三、NumPy数组基础
+    三、NumPy 数组基础
   </a>
   
     <nav class="md-nav">
@@ -751,7 +751,7 @@
       
         <li class="md-nav__item">
   <a href="#numpy_3" class="md-nav__link">
-    四、NumPy数组的计算：通用函数
+    四、NumPy 数组的计算：通用函数
   </a>
   
 </li>
@@ -765,7 +765,7 @@
       
         <li class="md-nav__item">
   <a href="#broadcast" class="md-nav__link">
-    六、数组的计算：广播broadcast
+    六、数组的计算：广播 broadcast
   </a>
   
 </li>
@@ -817,34 +817,26 @@
                 
                 
                 <h1 id="numpy">NumPy 入门<a class="headerlink" href="#numpy" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span>title: NumPy intro
-summary: NumPy feature summary
-authors:
-   - roseau
-date: 2019-11-29
-lastUpdate: 2019-11-29
-</pre></div>
-
 <blockquote>
 <p>本文主要参考自 <em>Python Data Science Handbook by Jake VanderPlas (O’Reilly).Copyright 2017 Jake VanderPlas,978-1-491-91205-8</em></p>
 </blockquote>
-<h3 id="numpy_1">一、Numpy简介<a class="headerlink" href="#numpy_1" title="Permanent link">&para;</a></h3>
+<h3 id="numpy_1">一、Numpy 简介<a class="headerlink" href="#numpy_1" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>NumPy是Python语言的一个扩展程序库。支持高端大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。</p>
+<p>NumPy 是 Python 语言的一个扩展程序库。支持高端大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。</p>
 </blockquote>
 <p><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/1200px-NumPy_logo.svg.png" style="zoom: 33%;" /></p>
-<p>NumPy引入了多维数组以及可以直接有效率地操作多维数组的函数与运算符。因此在NumPy上只要能被表示为针对数组或矩阵运算的算法，其运行效率几乎都可以与编译过的等效C语言代码一样快。</p>
-<p>NumPy提供了高效存储和操作密集数据缓存的接口。在某些方面，NumPy数组与Python内置的列表类型非常相似。但是随着数组在维度上的变大，NumPy提供了更加高效的存储和数据操作。<strong>NumPy几乎是整个Python数据科学工具生态系统的核心。</strong></p>
-<p>一般来说，我们使用<code>import numpy as np</code>来使用NumPy。</p>
-<h3 id="python">二、理解Python中的数据类型<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
-<p>Python为了获得灵活的类型，列表中的每一项都必须包含各自的类型信息，也就是，每一项都是一个完整的Python对象。</p>
-<p>不同于Python列表，<strong>Numpy要求数组必须包含同一类型的数据</strong>。如果类型不匹配，NumPy将会向上转换。如果希望明确设置数组的数据类型，可以用<code>dtype</code>关键字：</p>
+<p>NumPy 引入了多维数组以及可以直接有效率地操作多维数组的函数与运算符。因此在 NumPy 上只要能被表示为针对数组或矩阵运算的算法，其运行效率几乎都可以与编译过的等效 C 语言代码一样快。</p>
+<p>NumPy 提供了高效存储和操作密集数据缓存的接口。在某些方面，NumPy 数组与 Python 内置的列表类型非常相似。但是随着数组在维度上的变大，NumPy 提供了更加高效的存储和数据操作。<strong>NumPy 几乎是整个 Python 数据科学工具生态系统的核心。</strong></p>
+<p>一般来说，我们使用<code>import numpy as np</code>来使用 NumPy。</p>
+<h3 id="python">二、理解 Python 中的数据类型<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<p>Python 为了获得灵活的类型，列表中的每一项都必须包含各自的类型信息，也就是，每一项都是一个完整的 Python 对象。</p>
+<p>不同于 Python 列表，<strong>Numpy 要求数组必须包含同一类型的数据</strong>。如果类型不匹配，NumPy 将会向上转换。如果希望明确设置数组的数据类型，可以用<code>dtype</code>关键字：</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float32</span><span class="p">)</span>
 </pre></div>
 
-<p>最后，不同于Python列表，NumPy可以被指定为多维的。</p>
-<p>面对大型数组的时候，用numpy内置的方法从头创建数组是一种更高效的方法，示例如下：</p>
+<p>最后，不同于 Python 列表，NumPy 可以被指定为多维的。</p>
+<p>面对大型数组的时候，用 numpy 内置的方法从头创建数组是一种更高效的方法，示例如下：</p>
 <div class="codehilite"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="err">创建一个长度为</span><span class="mi">10</span><span class="err">的数组，数组的值都是</span><span class="mi">0</span>
         <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
 
@@ -912,10 +904,10 @@ lastUpdate: 2019-11-29
 
 <span class="n">Out</span><span class="p">[</span><span class="mi">21</span><span class="p">]:</span> <span class="n">array</span><span class="p">([</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">])</span><span class="err">”</span>
 
-<span class="n">Excerpt</span> <span class="n">From</span><span class="p">:</span> <span class="p">[</span><span class="err">美</span><span class="p">]</span> <span class="n">Jake</span> <span class="n">VanderPlas</span><span class="o">.</span> <span class="err">“</span><span class="n">Python数据科学手册</span><span class="o">.</span><span class="err">”</span> <span class="n">Apple</span> <span class="n">Books</span><span class="o">.</span> 
+<span class="n">Excerpt</span> <span class="n">From</span><span class="p">:</span> <span class="p">[</span><span class="err">美</span><span class="p">]</span> <span class="n">Jake</span> <span class="n">VanderPlas</span><span class="o">.</span> <span class="err">“</span><span class="n">Python数据科学手册</span><span class="o">.</span><span class="err">”</span> <span class="n">Apple</span> <span class="n">Books</span><span class="o">.</span>
 </pre></div>
 
-<h3 id="numpy_2">三、NumPy数组基础<a class="headerlink" href="#numpy_2" title="Permanent link">&para;</a></h3>
+<h3 id="numpy_2">三、NumPy 数组基础<a class="headerlink" href="#numpy_2" title="Permanent link">&para;</a></h3>
 <p>Python 中的数据操作几乎等同于 NumPy 数组操作，甚至新出现的 Pandas 工具（之后介绍）也是构建在 NumPy 数组的基础之上的。</p>
 <h4 id="1">1、数组的属性<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
 <ul>
@@ -941,13 +933,13 @@ lastUpdate: 2019-11-29
 <h4 id="4">4、数组的拼接和变形<a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>拼接或连接两个数组：np.concatenate np.vstack np.hstack </p>
+<p>拼接或连接两个数组：np.concatenate np.vstack np.hstack</p>
 </li>
 <li>
 <p>分裂：np.split np.hsplit np.vsplit，参数为索引列表，记录分裂点的位置</p>
 </li>
 </ul>
-<h3 id="numpy_3">四、NumPy数组的计算：通用函数<a class="headerlink" href="#numpy_3" title="Permanent link">&para;</a></h3>
+<h3 id="numpy_3">四、NumPy 数组的计算：通用函数<a class="headerlink" href="#numpy_3" title="Permanent link">&para;</a></h3>
 <p>NumPy 为很多类型的操作提供了非常方便的、静态类型的、可编译程序的接口，也被称作向量操作。你可以通过简单地对数组执行操作来实现，这里对数组的操作将会被用于数组中的每一个元素。这种向量方法被用于将循环推送至 NumPy 之下的编译层，这样会取得更快的执行效率。</p>
 <p>通过通用函数用向量的方式进行计算几乎总比用 Python 循环实现的计算更加有效，尤其是当数组很大时。只要你看到 Python 脚本中有这样的循环，就应该考虑能否用向量方式替换这个循环。</p>
 <ul>
@@ -961,10 +953,10 @@ lastUpdate: 2019-11-29
 <p>高级的通用函数特性：</p>
 <ul>
 <li>
-<p>指定输出：所有通用函数都可通过out参数来指定计算结果存放的位置</p>
+<p>指定输出：所有通用函数都可通过 out 参数来指定计算结果存放的位置</p>
 </li>
 <li>
-<p>聚合：一个reduce方法会对给定的元素和操作重复执行，直至得到单个的结果，如果需要存放每次计算的中间结果，可以使用accumulate。在一些特殊情况中，NumPy提供了专用的函数（np.sum、np.prod、np.cumsum、np.cumprod ），它们也可以实现以上 reduce 的功能</p>
+<p>聚合：一个 reduce 方法会对给定的元素和操作重复执行，直至得到单个的结果，如果需要存放每次计算的中间结果，可以使用 accumulate。在一些特殊情况中，NumPy 提供了专用的函数（np.sum、np.prod、np.cumsum、np.cumprod ），它们也可以实现以上 reduce 的功能</p>
 </li>
 <li>
 <p>任何通用函数都可以用 outer 方法获得两个不同输入数组所有元素对的函数运算结果。</p>
@@ -974,25 +966,25 @@ lastUpdate: 2019-11-29
 <p>NumPy 有非常快速的内置聚合函数可用于数组：</p>
 <ul>
 <li>数组值求和：np.sum</li>
-<li>最小值和最大值：np.min np.max </li>
-<li>多维度聚合：聚合函数参数axis可以指定沿着哪个轴的方向进行聚合</li>
+<li>最小值和最大值：np.min np.max</li>
+<li>多维度聚合：聚合函数参数 axis 可以指定沿着哪个轴的方向进行聚合</li>
 </ul>
-<p>Numpy中可用的聚合函数：
-函数名称    NaN安全版本 描述
-np.sum  np.nansum   计算元素的和
-np.prod np.nanprod  计算元素的积
-np.mean np.nanmean  计算元素的平均值
-np.std  np.nanstd   计算元素的标准差
-np.var  np.nanvar   计算元素的方差
-np.min  np.nanmin   找出最小值
-np.max  np.nanmax   找出最大值
-np.argmin   np.nanargmin    找出最小值的索引
-np.argmax   np.nanargmax    找出最大值的索引
-np.median   np.nanmedian    计算元素的中位数
-np.percentile   np.nanpercentile    计算基于元素排序的统计值
-np.any  N/A 验证任何一个元素是否为真
-np.all  N/A 验证所有元素是否为真</p>
-<h3 id="broadcast">六、数组的计算：广播broadcast<a class="headerlink" href="#broadcast" title="Permanent link">&para;</a></h3>
+<p>Numpy 中可用的聚合函数：
+函数名称 NaN 安全版本 描述
+np.sum np.nansum 计算元素的和
+np.prod np.nanprod 计算元素的积
+np.mean np.nanmean 计算元素的平均值
+np.std np.nanstd 计算元素的标准差
+np.var np.nanvar 计算元素的方差
+np.min np.nanmin 找出最小值
+np.max np.nanmax 找出最大值
+np.argmin np.nanargmin 找出最小值的索引
+np.argmax np.nanargmax 找出最大值的索引
+np.median np.nanmedian 计算元素的中位数
+np.percentile np.nanpercentile 计算基于元素排序的统计值
+np.any N/A 验证任何一个元素是否为真
+np.all N/A 验证所有元素是否为真</p>
+<h3 id="broadcast">六、数组的计算：广播 broadcast<a class="headerlink" href="#broadcast" title="Permanent link">&para;</a></h3>
 <p>广播可以简单理解为用于不同大小数组的二进制通用函数（加、减、乘等）的一组规则。</p>
 <p><img alt="" src="https://raw.githubusercontent.com/RoseauHan/upic/master/31rD3t.png" /></p>
 <p>广播的规则：</p>
@@ -1006,7 +998,7 @@ np.all  N/A 验证所有元素是否为真</p>
 <li>NumPy 还实现了如 &lt;（小于）和 &gt;（大于）的逐元素比较的通用函数。</li>
 <li>利用布尔数组统计记录的个数</li>
 <li>
-<p>np.all() 和np.any() 也可以用于沿着特定的坐标轴</p>
+<p>np.all() 和 np.any() 也可以用于沿着特定的坐标轴</p>
 </li>
 <li>
 <p>利用布尔运算符</p>
@@ -1020,7 +1012,7 @@ np.all  N/A 验证所有元素是否为真</p>
 <p>花哨的索引可以和其他索引方案结合起来形成更强大的索引操作。</p>
 <p>花哨的索引的一个常见用途是从一个矩阵中选择行的子集</p>
 <h3 id="_3">九、其他资料<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>NumPy的核心功能是"ndarray"(即n-dimensional array，多维数组)数据结构。这是一个表示多维度、同质并且固定大小的数组对象。而由一个与此数组相关系的数据类型对象来描述其数组元素的数据格式(例如其字符组顺序、在存储器中占用的字符组数量、整数或者浮点数等等)。</p>
+<p>NumPy 的核心功能是"ndarray"(即 n-dimensional array，多维数组)数据结构。这是一个表示多维度、同质并且固定大小的数组对象。而由一个与此数组相关系的数据类型对象来描述其数组元素的数据格式(例如其字符组顺序、在存储器中占用的字符组数量、整数或者浮点数等等)。</p>
 <ol>
 <li><a href="https://numpy.org"><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_web.png" alt="web" style="zoom:15%;" /> https://numpy.org</a></li>
 <li><a href="https://numpy.org/devdocs/user/quickstart.html"><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_doc.png" alt="docu" style="zoom:15%;" /> Quickstart tutorial </a></li>
@@ -1102,7 +1094,7 @@ np.all  N/A 验证所有元素是否为真</p>
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2019 roseauhan
+            Copyright &copy; 2019 - 2020 roseau
           </div>
         
         powered by
