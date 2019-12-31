@@ -42,7 +42,7 @@
     
     
       
-        <title>data science intro</title>
+        <title>data science intro - Cookbook</title>
       
     
     
@@ -931,5 +931,13 @@ Python目前是由一个核心开发团队在开发与维护，Guido van Rossum 
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
-  </body>
+  
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.0-beta.2/timeago.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.0-beta.2/timeago.locales.min.js"></script>
+          <script>
+            const nodes = document.querySelectorAll('.timeago');
+            const locale = nodes[0].getAttribute('locale');
+            timeago.render(nodes, locale);
+          </script>
+        </body>
 </html>

@@ -42,7 +42,7 @@
     
     
       
-        <title>What's in my Mac ?</title>
+        <title>Mac App - Cookbook</title>
       
     
     
@@ -144,7 +144,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                What's in my Mac ?
+                Mac App
               
             </span>
           
@@ -1336,5 +1336,13 @@ lastUpdate: 2019-11-24
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
-  </body>
+  
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.0-beta.2/timeago.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.0-beta.2/timeago.locales.min.js"></script>
+          <script>
+            const nodes = document.querySelectorAll('.timeago');
+            const locale = nodes[0].getAttribute('locale');
+            timeago.render(nodes, locale);
+          </script>
+        </body>
 </html>
