@@ -1,13 +1,5 @@
 # What's in my Win10  ?
 
-```
-title: What's in my Win10 ?
-summary: record and share my own Win10 applications.
-authors:
-    - roseau
-date: 2019-08-17
-lastUpdate: 2019-8-17
-```
 ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/JK7rMA.jpg)
 
 This ia a list of my own personal Win10 applications, including 3 categories :

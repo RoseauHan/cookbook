@@ -31,7 +31,7 @@ repo_name: "Cookbook"
 repo_url: "https://github.com/RoseauHan/cookbook/"
 
 # Copyright
-copyright: "Copyright &copy; 2019 roseauhan"
+copyright: "Copyright &copy; 2019 - 2020 roseau"
 
 # Configuration
 theme:
@@ -46,13 +46,13 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  # favicon: assets/images/favicon.ico
+  favicon: assets/favicon.ico
   logo: "https://i.loli.net/2019/08/11/ZNIuBreOtdp1XjG.png"
 
 # Customization
 extra:
   disqus: "roseauhan"
-  manifest: "manifest.webmanifest"
+  manifest: "assets/manifest.webmanifest"
   social:
     - type: "github-alt"
       link: "https://github.com/roseauhan"

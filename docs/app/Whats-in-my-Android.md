@@ -1,14 +1,5 @@
 # What's in my Android 📱 ?
 
-```
-title: What's in my Android ?
-summary: record and share my own Android applications.
-authors:
-    - roseau
-date: 2019-08-15
-lastUpdate: 2019-10-12
-```
-
 ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/XX23CE.jpg)
 
 This ia a list of my own personal Android applications, including 2 categories :

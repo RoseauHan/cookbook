@@ -1,13 +1,5 @@
 # What's in my Mac  ?
 
-```
-title: What's in my Mac ?
-summary: record and share my own Mac applications.
-authors:
-    - roseau
-date: 2019-08-13
-lastUpdate: 2019-11-24
-```
 ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/wwZ9Uf.png)
 
  This ia a list of my own personal Mac applications, including four categories :

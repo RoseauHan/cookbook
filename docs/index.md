@@ -12,73 +12,52 @@
 [![](https://badgen.net/twitter/follow/roseauhan)](https://twitter.com/roseauhan)
 [![](https://img.shields.io/github/license/RoseauHan/cookbook)](https://github.com/RoseauHan/cookbook/tree/master/LICENSE)
 
+[🇨🇳 中文文档](https://github.com/RoseauHan/cookbook/blob/master/README-CN.md)
 
-[🇨🇳中文文档](https://github.com/RoseauHan/cookbook/blob/master/README-CN.md)
-
-***Personal Knowledge Database wiki Library***
-
-> Recently update:
-> - [NumPy intro](https://roseauhan.github.io/cookbook/data_science/numpy_intro)
-> - [data science intro](https://roseauhan.github.io/cookbook/data_science/data_science_intro)
-> - [IPython intro](https://roseauhan.github.io/cookbook/data_science/ipython_intro)
-> - [Learn double pinyin right now](https://roseauhan.github.io/cookbook/basic_knowledge/double_pinyin)
-> - [How to Google correctly](https://roseauhan.github.io/cookbook/basic_knowledge/how_to_google)
-> - [Machine learning tool chain](https://roseauhan.github.io/cookbook/machine_learning/tool_chain)
-> - [What's in my tampermonkey Scripts](https://roseauhan.github.io/cookbook/app/Whats-in-my-tampermonkey)
-
-
-
+**_Personal Knowledge Database wiki Library_**
 
 ## 😋What's this？
 
-
 **Personal knowledge database wiki library，GPL license，Welcome 👏pull request**
-
 
 [Cookbook —— Personal knowledge database wiki library ](https://roseauhan.github.io/cookbook)
 
-
 ![](https://i.loli.net/2019/08/09/Z9iGLzEN7bmJgsx.png)
-
 
 ## 🤯what exactly Include ？
 
-I will share different kinds of note in my learning process , *including front-end back-end blog algorithm blog sofeware and so on…… *.  👏 Welcome pull request again!   At present, this plan has just began, I will update as soon as possible.
-
+I will share different kinds of note in my learning process , _including front-end back-end blog algorithm blog sofeware and so on…… _. 👏 Welcome pull request again! At present, this plan has just began, I will update as soon as possible.
 
 ![wwdc19-og-fix.png](https://i.loli.net/2019/08/09/gQ4tmo6idskz87x.png)
 
-
 ## 🧐How to build？
 
-
-- Mainly using  [MkDocs](https://github.com/mkdocs/mkdocs/) -Project documentation with Markdown.
-
+- Mainly using [MkDocs](https://github.com/mkdocs/mkdocs/) -Project documentation with Markdown.
 
 ```
 MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
 ```
 
+- The default theme of _mkdocs_ is ugly，so I choose to use [Material theme](https://squidfunk.github.io/mkdocs-material/).
 
-- The default theme of *mkdocs* is ugly，so I choose to use [Material theme](https://squidfunk.github.io/mkdocs-material/).
 ```
 Material is a theme for MkDocs, an excellent static site generator geared towards project documentation. It is built using Google's Material Design guidelines.
 ```
 
 just a simple command `mkdocs gh-deploy`, then you can deploy it in Github pages. Now this project is deployed not only [GitHub Pages](https://roseauhan.github.io/cookbook/)，but also [readthedoc](https://roseau-cookbook.readthedocs.io)，but the readthedoc version can only using the default theme.
 
-
 - ⚑ I will write a more concrete article to help your guys to learn it later.
 
 ---
+
 ## 🧐How to Contribute？
 
 ![pic](https://raw.githubusercontent.com/RoseauHan/upic-upload/master/ScreenShot.png)
+
 - You can edit the article simply click the button
 - or you can pull request to [my repo](https://github.com/RoseauHan/cookbook/)
 
 📒 **Cookbook** ©roseauhan. Released under the GPL License.
-
 
 Author & maintainer: roseauhan.
 

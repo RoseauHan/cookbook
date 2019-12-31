@@ -1,42 +1,33 @@
 # NumPy 入门
 
-```
-title: NumPy intro
-summary: NumPy feature summary
-authors:
-   - roseau
-date: 2019-11-29
-lastUpdate: 2019-11-29
-```
+> 本文主要参考自 _Python Data Science Handbook by Jake VanderPlas (O’Reilly).Copyright 2017 Jake VanderPlas,978-1-491-91205-8_
 
-> 本文主要参考自 *Python Data Science Handbook by Jake VanderPlas (O’Reilly).Copyright 2017 Jake VanderPlas,978-1-491-91205-8*
+### 一、Numpy 简介
 
-### 一、Numpy简介
-
-> NumPy是Python语言的一个扩展程序库。支持高端大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。
+> NumPy 是 Python 语言的一个扩展程序库。支持高端大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。
 
 <img src="https://raw.githubusercontent.com/RoseauHan/upic/master/1200px-NumPy_logo.svg.png" style="zoom: 33%;" />
 
-NumPy引入了多维数组以及可以直接有效率地操作多维数组的函数与运算符。因此在NumPy上只要能被表示为针对数组或矩阵运算的算法，其运行效率几乎都可以与编译过的等效C语言代码一样快。
+NumPy 引入了多维数组以及可以直接有效率地操作多维数组的函数与运算符。因此在 NumPy 上只要能被表示为针对数组或矩阵运算的算法，其运行效率几乎都可以与编译过的等效 C 语言代码一样快。
 
-NumPy提供了高效存储和操作密集数据缓存的接口。在某些方面，NumPy数组与Python内置的列表类型非常相似。但是随着数组在维度上的变大，NumPy提供了更加高效的存储和数据操作。**NumPy几乎是整个Python数据科学工具生态系统的核心。**
+NumPy 提供了高效存储和操作密集数据缓存的接口。在某些方面，NumPy 数组与 Python 内置的列表类型非常相似。但是随着数组在维度上的变大，NumPy 提供了更加高效的存储和数据操作。**NumPy 几乎是整个 Python 数据科学工具生态系统的核心。**
 
-一般来说，我们使用`import numpy as np`来使用NumPy。
+一般来说，我们使用`import numpy as np`来使用 NumPy。
 
-### 二、理解Python中的数据类型
+### 二、理解 Python 中的数据类型
 
-Python为了获得灵活的类型，列表中的每一项都必须包含各自的类型信息，也就是，每一项都是一个完整的Python对象。
+Python 为了获得灵活的类型，列表中的每一项都必须包含各自的类型信息，也就是，每一项都是一个完整的 Python 对象。
 
-不同于Python列表，**Numpy要求数组必须包含同一类型的数据**。如果类型不匹配，NumPy将会向上转换。如果希望明确设置数组的数据类型，可以用`dtype`关键字：
+不同于 Python 列表，**Numpy 要求数组必须包含同一类型的数据**。如果类型不匹配，NumPy 将会向上转换。如果希望明确设置数组的数据类型，可以用`dtype`关键字：
 
 ```python
 import numpy as np
 np.array([1,2,3,4], dtype=float32)
 ```
 
-最后，不同于Python列表，NumPy可以被指定为多维的。
+最后，不同于 Python 列表，NumPy 可以被指定为多维的。
 
-面对大型数组的时候，用numpy内置的方法从头创建数组是一种更高效的方法，示例如下：
+面对大型数组的时候，用 numpy 内置的方法从头创建数组是一种更高效的方法，示例如下：
 
 ```python
 In[12]: 创建一个长度为10的数组，数组的值都是0
@@ -106,10 +97,10 @@ In[21]: # 创建一个由3个整型数组成的未初始化的数组
 
 Out[21]: array([ 1.,  1.,  1.])”
 
-Excerpt From: [美] Jake VanderPlas. “Python数据科学手册.” Apple Books. 
+Excerpt From: [美] Jake VanderPlas. “Python数据科学手册.” Apple Books.
 ```
 
-### 三、NumPy数组基础
+### 三、NumPy 数组基础
 
 Python 中的数据操作几乎等同于 NumPy 数组操作，甚至新出现的 Pandas 工具（之后介绍）也是构建在 NumPy 数组的基础之上的。
 
@@ -136,12 +127,11 @@ Python 中的数据操作几乎等同于 NumPy 数组操作，甚至新出现的
 
 #### 4、数组的拼接和变形
 
-- 拼接或连接两个数组：np.concatenate np.vstack np.hstack 
+- 拼接或连接两个数组：np.concatenate np.vstack np.hstack
 
 - 分裂：np.split np.hsplit np.vsplit，参数为索引列表，记录分裂点的位置
 
-
-### 四、NumPy数组的计算：通用函数
+### 四、NumPy 数组的计算：通用函数
 
 NumPy 为很多类型的操作提供了非常方便的、静态类型的、可编译程序的接口，也被称作向量操作。你可以通过简单地对数组执行操作来实现，这里对数组的操作将会被用于数组中的每一个元素。这种向量方法被用于将循环推送至 NumPy 之下的编译层，这样会取得更快的执行效率。
 
@@ -156,9 +146,9 @@ NumPy 为很多类型的操作提供了非常方便的、静态类型的、可�
 
 高级的通用函数特性：
 
-- 指定输出：所有通用函数都可通过out参数来指定计算结果存放的位置
+- 指定输出：所有通用函数都可通过 out 参数来指定计算结果存放的位置
 
-- 聚合：一个reduce方法会对给定的元素和操作重复执行，直至得到单个的结果，如果需要存放每次计算的中间结果，可以使用accumulate。在一些特殊情况中，NumPy提供了专用的函数（np.sum、np.prod、np.cumsum、np.cumprod ），它们也可以实现以上 reduce 的功能
+- 聚合：一个 reduce 方法会对给定的元素和操作重复执行，直至得到单个的结果，如果需要存放每次计算的中间结果，可以使用 accumulate。在一些特殊情况中，NumPy 提供了专用的函数（np.sum、np.prod、np.cumsum、np.cumprod ），它们也可以实现以上 reduce 的功能
 
 - 任何通用函数都可以用 outer 方法获得两个不同输入数组所有元素对的函数运算结果。
 
@@ -167,26 +157,26 @@ NumPy 为很多类型的操作提供了非常方便的、静态类型的、可�
 NumPy 有非常快速的内置聚合函数可用于数组：
 
 - 数组值求和：np.sum
-- 最小值和最大值：np.min np.max 
-- 多维度聚合：聚合函数参数axis可以指定沿着哪个轴的方向进行聚合
+- 最小值和最大值：np.min np.max
+- 多维度聚合：聚合函数参数 axis 可以指定沿着哪个轴的方向进行聚合
 
-Numpy中可用的聚合函数：
-函数名称	NaN安全版本	描述
-np.sum	np.nansum	计算元素的和
-np.prod	np.nanprod	计算元素的积
-np.mean	np.nanmean	计算元素的平均值
-np.std	np.nanstd	计算元素的标准差
-np.var	np.nanvar	计算元素的方差
-np.min	np.nanmin	找出最小值
-np.max	np.nanmax	找出最大值
-np.argmin	np.nanargmin	找出最小值的索引
-np.argmax	np.nanargmax	找出最大值的索引
-np.median	np.nanmedian	计算元素的中位数
-np.percentile	np.nanpercentile	计算基于元素排序的统计值
-np.any	N/A	验证任何一个元素是否为真
-np.all	N/A	验证所有元素是否为真
+Numpy 中可用的聚合函数：
+函数名称 NaN 安全版本 描述
+np.sum np.nansum 计算元素的和
+np.prod np.nanprod 计算元素的积
+np.mean np.nanmean 计算元素的平均值
+np.std np.nanstd 计算元素的标准差
+np.var np.nanvar 计算元素的方差
+np.min np.nanmin 找出最小值
+np.max np.nanmax 找出最大值
+np.argmin np.nanargmin 找出最小值的索引
+np.argmax np.nanargmax 找出最大值的索引
+np.median np.nanmedian 计算元素的中位数
+np.percentile np.nanpercentile 计算基于元素排序的统计值
+np.any N/A 验证任何一个元素是否为真
+np.all N/A 验证所有元素是否为真
 
-### 六、数组的计算：广播broadcast
+### 六、数组的计算：广播 broadcast
 
 广播可以简单理解为用于不同大小数组的二进制通用函数（加、减、乘等）的一组规则。
 
@@ -202,13 +192,13 @@ np.all	N/A	验证所有元素是否为真
 
 - NumPy 还实现了如 <（小于）和 >（大于）的逐元素比较的通用函数。
 - 利用布尔数组统计记录的个数
-- np.all() 和np.any() 也可以用于沿着特定的坐标轴
+- np.all() 和 np.any() 也可以用于沿着特定的坐标轴
 
 - 利用布尔运算符
 - 将布尔数组作为掩码，通过掩码选择数据的字数据集
 - and 和 or 判断整个对象是真或假，而 & 和 | 是指每个对象中的比特位。
 
-### 八、花哨的数组 fancy indexing 
+### 八、花哨的数组 fancy indexing
 
 花哨的索引和前面那些简单的索引非常类似，但是传递的是索引数组，而不是单个标量。花哨的索引让我们能够快速获得并修改复杂的数组值的子数据集。
 
@@ -218,10 +208,9 @@ np.all	N/A	验证所有元素是否为真
 
 花哨的索引的一个常见用途是从一个矩阵中选择行的子集
 
-
 ### 九、其他资料
 
-NumPy的核心功能是"ndarray"(即n-dimensional array，多维数组)数据结构。这是一个表示多维度、同质并且固定大小的数组对象。而由一个与此数组相关系的数据类型对象来描述其数组元素的数据格式(例如其字符组顺序、在存储器中占用的字符组数量、整数或者浮点数等等)。
+NumPy 的核心功能是"ndarray"(即 n-dimensional array，多维数组)数据结构。这是一个表示多维度、同质并且固定大小的数组对象。而由一个与此数组相关系的数据类型对象来描述其数组元素的数据格式(例如其字符组顺序、在存储器中占用的字符组数量、整数或者浮点数等等)。
 
 1. [<img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_web.png" alt="web" style="zoom:15%;" /> https://numpy.org](https://numpy.org)
 2. [<img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_doc.png" alt="docu" style="zoom:15%;" /> Quickstart tutorial ](https://numpy.org/devdocs/user/quickstart.html)

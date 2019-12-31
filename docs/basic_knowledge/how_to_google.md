@@ -1,14 +1,5 @@
 # 正确使用 Google
 
-```
-title: Use Google Correctly
-summary: how to Google.
-authors:
-   - roseau
-date: 2019-11-24
-lastUpdate: 2019-11-24
-```
-
 #### 一、遇到的问题
 
 无论我们是做科研工作还是在日常生活中，我们总会遇到各种各样的问题。然而人的经验始终是有限的，我们不可能知道每一个问题的答案，尤其是在这个信息爆炸的时代，问题总是无穷无尽的。
