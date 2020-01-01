@@ -1,6 +1,6 @@
 ---
 title: valid_parentheses
-tags: stack
+tags: stack, easy
 authors:
   - roseau
 date: 2020-01-01
