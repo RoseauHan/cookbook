@@ -46,7 +46,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: assets/favicon.ico
-  # logo: "https://i.loli.net/2019/08/11/ZNIuBreOtdp1XjG.png"
+  logo: assets/favicon.ico
 
 # Customization
 extra:
