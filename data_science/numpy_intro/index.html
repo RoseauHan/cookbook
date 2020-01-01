@@ -129,7 +129,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://roseauhan.github.io/cookbook/" title="Cookbook" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <img src="../../assets/favicon.ico" width="24" height="24">
           
         </a>
       </div>
@@ -282,7 +282,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://roseauhan.github.io/cookbook/" title="Cookbook" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <img src="../../assets/favicon.ico" width="48" height="48">
       
     </a>
     Cookbook
@@ -827,10 +827,10 @@
 <p><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/1200px-NumPy_logo.svg.png" style="zoom: 33%;" /></p>
 <p>NumPy 引入了多维数组以及可以直接有效率地操作多维数组的函数与运算符。因此在 NumPy 上只要能被表示为针对数组或矩阵运算的算法，其运行效率几乎都可以与编译过的等效 C 语言代码一样快。</p>
 <p>NumPy 提供了高效存储和操作密集数据缓存的接口。在某些方面，NumPy 数组与 Python 内置的列表类型非常相似。但是随着数组在维度上的变大，NumPy 提供了更加高效的存储和数据操作。<strong>NumPy 几乎是整个 Python 数据科学工具生态系统的核心。</strong></p>
-<p>一般来说，我们使用<code>import numpy as np</code>来使用 NumPy。</p>
+<p>一般来说，我们使用<code class="codehilite"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span></code>来使用 NumPy。</p>
 <h3 id="python">二、理解 Python 中的数据类型<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
 <p>Python 为了获得灵活的类型，列表中的每一项都必须包含各自的类型信息，也就是，每一项都是一个完整的 Python 对象。</p>
-<p>不同于 Python 列表，<strong>Numpy 要求数组必须包含同一类型的数据</strong>。如果类型不匹配，NumPy 将会向上转换。如果希望明确设置数组的数据类型，可以用<code>dtype</code>关键字：</p>
+<p>不同于 Python 列表，<strong>Numpy 要求数组必须包含同一类型的数据</strong>。如果类型不匹配，NumPy 将会向上转换。如果希望明确设置数组的数据类型，可以用<code class="codehilite"><span class="n">dtype</span></code>关键字：</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float32</span><span class="p">)</span>
 </pre></div>
@@ -943,7 +943,7 @@
 <p>NumPy 为很多类型的操作提供了非常方便的、静态类型的、可编译程序的接口，也被称作向量操作。你可以通过简单地对数组执行操作来实现，这里对数组的操作将会被用于数组中的每一个元素。这种向量方法被用于将循环推送至 NumPy 之下的编译层，这样会取得更快的执行效率。</p>
 <p>通过通用函数用向量的方式进行计算几乎总比用 Python 循环实现的计算更加有效，尤其是当数组很大时。只要你看到 Python 脚本中有这样的循环，就应该考虑能否用向量方式替换这个循环。</p>
 <ul>
-<li>数组的运算：标准的加减乘除、逻辑非、<code>**</code> 表示的指数运算和<code>%</code>表示的模运算</li>
+<li>数组的运算：标准的加减乘除、逻辑非、<code class="codehilite"><span class="o">**</span></code> 表示的指数运算和<code class="codehilite"><span class="c">%</span></code>表示的模运算</li>
 <li>绝对值 np.abs()</li>
 <li>三角函数</li>
 <li>指数和对数</li>

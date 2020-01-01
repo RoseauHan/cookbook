@@ -129,7 +129,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://roseauhan.github.io/cookbook/" title="Cookbook" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <img src="../../assets/favicon.ico" width="24" height="24">
           
         </a>
       </div>
@@ -282,7 +282,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://roseauhan.github.io/cookbook/" title="Cookbook" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <img src="../../assets/favicon.ico" width="48" height="48">
       
     </a>
     Cookbook
@@ -751,15 +751,15 @@
 <h5 id="_3">（一）基本搜索<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
 <ul>
 <li>优先使用英文关键字搜索</li>
-<li>尽量不要输入句子，使用关键字查询，关键字之间空格隔开：<code>关键字1 关键字2</code></li>
-<li><strong>逻辑运算</strong>：空格默认就是<code>+</code>，也就是说 <code>关键字1 关键字2</code>会被 Google 解析为<code>关键字1 + 关键字2</code>, 表示结果中同时包含所有关键字；如果使用<code>关键字1 OR 关键字2</code>，则表示结果中包含关键字 1 或者关键字 2。</li>
-<li><strong>精确查找</strong>：使用引号 <code>”关键字“</code>，结果必须包含完整的关键字。</li>
-<li><strong>无关筛选</strong>：使用减号 <code>-关键字</code>，结果中不能存在该关键字。</li>
-<li><strong>指定类型</strong>：<code>filetype:文件格式</code>，只搜索该文件格式的文件。</li>
-<li><strong>指定网站</strong>：<code>site:网址</code>，只搜索该网站内的内容。</li>
-<li><strong>模糊搜索</strong>：使用通配符 <code>*</code>号，搜索字符串中可以包含星号，用来替代任意字符串，使用通配符<code>？</code>号，代表单个字符。</li>
-<li><strong>近似搜索</strong>：使用波浪号 <code>～关键字</code>，除了给出的关键字之外，还要搜索与波浪号~后面的那个单词相关的词汇。</li>
-<li><strong>只搜标题</strong>：<code>intitle:关键字</code>，只有标题中含有关键字的网页才会出现。</li>
+<li>尽量不要输入句子，使用关键字查询，关键字之间空格隔开：<code class="codehilite"><span class="err">关键字</span><span class="mi">1</span> <span class="err">关键字</span><span class="mi">2</span></code></li>
+<li><strong>逻辑运算</strong>：空格默认就是<code class="codehilite"><span class="o">+</span></code>，也就是说 <code class="codehilite"><span class="err">关键字</span><span class="mi">1</span> <span class="err">关键字</span><span class="mi">2</span></code>会被 Google 解析为<code class="codehilite"><span class="err">关键字</span><span class="mi">1</span> <span class="o">+</span> <span class="err">关键字</span><span class="mi">2</span></code>, 表示结果中同时包含所有关键字；如果使用<code class="codehilite"><span class="err">关键字</span><span class="mi">1</span> <span class="k">OR</span> <span class="err">关键字</span><span class="mi">2</span></code>，则表示结果中包含关键字 1 或者关键字 2。</li>
+<li><strong>精确查找</strong>：使用引号 <code class="codehilite"><span class="err">”关键字“</span></code>，结果必须包含完整的关键字。</li>
+<li><strong>无关筛选</strong>：使用减号 <code class="codehilite"><span class="o">-</span><span class="err">关键字</span></code>，结果中不能存在该关键字。</li>
+<li><strong>指定类型</strong>：<code class="codehilite"><span class="n">filetype</span><span class="o">:</span><span class="err">文件格式</span></code>，只搜索该文件格式的文件。</li>
+<li><strong>指定网站</strong>：<code class="codehilite"><span class="n">site</span><span class="o">:</span><span class="err">网址</span></code>，只搜索该网站内的内容。</li>
+<li><strong>模糊搜索</strong>：使用通配符 <code class="codehilite"><span class="o">*</span></code>号，搜索字符串中可以包含星号，用来替代任意字符串，使用通配符<code class="codehilite"><span class="err">？</span></code>号，代表单个字符。</li>
+<li><strong>近似搜索</strong>：使用波浪号 <code class="codehilite"><span class="err">～关键字</span></code>，除了给出的关键字之外，还要搜索与波浪号~后面的那个单词相关的词汇。</li>
+<li><strong>只搜标题</strong>：<code class="codehilite"><span class="n">intitle</span><span class="o">:</span><span class="err">关键字</span></code>，只有标题中含有关键字的网页才会出现。</li>
 <li><strong>组合搜索</strong>：只要语法正确，上述所有的搜索方式可以同时使用。</li>
 </ul>
 <blockquote>
@@ -768,12 +768,12 @@
 </blockquote>
 <h5 id="_4">（二）高级搜索<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
 <ul>
-<li><strong>使用主站</strong>：使用<code>goolge.com/ncr</code> 禁止谷歌按照当前地理位置重定向，直接进入 Google 主站。</li>
-<li><strong>搜索网址中的关键字</strong>：<code>inurl:关键字</code>，返回那些在 URL（网址）里边包含了查询的关键词的网页。</li>
-<li><strong>网站信息</strong>：<code>info:域名</code>，返回网站相关的信息。</li>
-<li><strong>指向网站的外链</strong>： <code>link to 网站</code></li>
-<li><strong>相关网站</strong>：<code>related:已知网站</code></li>
-<li><strong>自定义搜索</strong>：<code>https://cse.google.com/</code></li>
+<li><strong>使用主站</strong>：使用<code class="codehilite"><span class="n">goolge</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">ncr</span></code> 禁止谷歌按照当前地理位置重定向，直接进入 Google 主站。</li>
+<li><strong>搜索网址中的关键字</strong>：<code class="codehilite"><span class="n">inurl</span><span class="o">:</span><span class="err">关键字</span></code>，返回那些在 URL（网址）里边包含了查询的关键词的网页。</li>
+<li><strong>网站信息</strong>：<code class="codehilite"><span class="n">info</span><span class="o">:</span><span class="err">域名</span></code>，返回网站相关的信息。</li>
+<li><strong>指向网站的外链</strong>： <code class="codehilite"><span class="n">link</span> <span class="k">to</span> <span class="err">网站</span></code></li>
+<li><strong>相关网站</strong>：<code class="codehilite"><span class="n">related</span><span class="o">:</span><span class="err">已知网站</span></code></li>
+<li><strong>自定义搜索</strong>：<code class="codehilite"><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cse</span><span class="p">.</span><span class="n">google</span><span class="p">.</span><span class="n">com</span><span class="o">/</span></code></li>
 </ul>
                 
                   

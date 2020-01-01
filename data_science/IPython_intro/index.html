@@ -129,7 +129,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://roseauhan.github.io/cookbook/" title="Cookbook" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <img src="../../assets/favicon.ico" width="24" height="24">
           
         </a>
       </div>
@@ -282,7 +282,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://roseauhan.github.io/cookbook/" title="Cookbook" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <img src="../../assets/favicon.ico" width="48" height="48">
       
     </a>
     Cookbook
@@ -791,33 +791,33 @@
 <h3 id="ipython_1">二、IPython 常用功能总结<a class="headerlink" href="#ipython_1" title="Permanent link">&para;</a></h3>
 <h4 id="_1">帮助和文档：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>符号<code>？</code>获取文档</li>
-<li>符号<code>??</code>获取源代码</li>
+<li>符号<code class="codehilite"><span class="err">？</span></code>获取文档</li>
+<li>符号<code class="codehilite"><span class="o">??</span></code>获取源代码</li>
 <li>Tab 补全探索模块</li>
-<li>反向搜索：<code>ctrl r</code>：对历史命令反向搜索</li>
+<li>反向搜索：<code class="codehilite"><span class="n">ctrl</span> <span class="n">r</span></code>：对历史命令反向搜索</li>
 </ul>
 <h4 id="ipython_2">IPython 魔法命令：<a class="headerlink" href="#ipython_2" title="Permanent link">&para;</a></h4>
-<p>IPython 提供了一些在普通 Python 语法基础之上的增强功能，这些功能被称作 IPython 魔法命令，都以<code>%</code>作为前缀。</p>
+<p>IPython 提供了一些在普通 Python 语法基础之上的增强功能，这些功能被称作 IPython 魔法命令，都以<code class="codehilite"><span class="c">%</span></code>作为前缀。</p>
 <p>主要分为两大类：</p>
-<p><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:" /> 行魔法：<code>%</code>前缀，作用于单行输入</p>
-<p><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:" /> 单元魔法：<code>%%</code>前缀，作用于多行输入。</p>
+<p><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:" /> 行魔法：<code class="codehilite"><span class="c">%</span></code>前缀，作用于单行输入</p>
+<p><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:" /> 单元魔法：<code class="codehilite"><span class="c">%%</span></code>前缀，作用于多行输入。</p>
 <p>常用命令如下：</p>
 <ul>
-<li><code>%lsmagic</code> 所有魔法函数</li>
-<li><code>%paste %cpaste</code> 粘贴代码块</li>
-<li><code>%run</code> 执行外部代码</li>
-<li><code>%timeit</code> 计算代码运行时间</li>
-<li><code>%history</code> 一次性获取此前所有的历史输入</li>
-<li><code>%xmode</code> 控制异常</li>
-<li><code>%debug</code> 调试</li>
-<li><code>%prun</code> 分析整个脚本</li>
+<li><code class="codehilite"><span class="nf">%lsmagic</span></code> 所有魔法函数</li>
+<li><code class="codehilite"><span class="nf">%paste</span> <span class="nf">%cpaste</span></code> 粘贴代码块</li>
+<li><code class="codehilite"><span class="nf">%run</span></code> 执行外部代码</li>
+<li><code class="codehilite"><span class="nf">%timeit</span></code> 计算代码运行时间</li>
+<li><code class="codehilite"><span class="nf">%history</span></code> 一次性获取此前所有的历史输入</li>
+<li><code class="codehilite"><span class="nf">%xmode</span></code> 控制异常</li>
+<li><code class="codehilite"><span class="nf">%debug</span></code> 调试</li>
+<li><code class="codehilite"><span class="nf">%prun</span></code> 分析整个脚本</li>
 </ul>
 <h4 id="_2">输入输出：<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>IPython 实际上创建了叫做 In 和 Out 的 Python 变量，这些变量自动更新以反应命令历史。</p>
 <ul>
-<li>可以根据数字调用：<code>In[num] Out[num]</code></li>
-<li>变量 <code>_</code>(单下划线)用于更新以前的输出，两条下划线获得倒数第二个历史输出，三条下滑线获得倒数第三个历史输出</li>
-<li><code>Out[num]</code>的简写形式是 <code>_[num]</code></li>
+<li>可以根据数字调用：<code class="codehilite"><span class="ow">In</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"> </span><span class="k">Out</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"></span></code></li>
+<li>变量 <code class="codehilite"><span class="n">_</span></code>(单下划线)用于更新以前的输出，两条下划线获得倒数第二个历史输出，三条下滑线获得倒数第三个历史输出</li>
+<li><code class="codehilite"><span class="k">Out</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"></span></code>的简写形式是 <code class="codehilite"><span class="n">_</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"></span></code></li>
 <li>禁止一个命令输出：行尾处添加分号</li>
 <li>命令前添加！，可执行 shell 命令，还可以在 shell 中传入或传出值</li>
 </ul>
