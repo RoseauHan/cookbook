@@ -12,7 +12,7 @@ nav:
 
   - Leetcode:
       - 20. Valid Parentheses: leetcode/valid_parentheses.md 
-      - 26. leetcode/Remove_Duplicates_from_Sorted_Array.md
+      - 26. Remove Duplicates from Sorted Array: leetcode/Remove_Duplicates_from_Sorted_Array.md
 
   - Basic Knowledge:
       - How to Google: basic_knowledge/how_to_google.md

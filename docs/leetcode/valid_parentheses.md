@@ -6,11 +6,11 @@ authors:
 date: 2020-01-01
 ---
 
-## 地址
+## Addr
 
 https://leetcode.com/problems/valid-parentheses/description
 
-## 描述
+## Desc
 
 ```
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -43,12 +43,13 @@ Input: "{[]}"
 Output: true
 ```
 
-## 思路
-利用栈
+## Algo
+
+Stack.
 
 ![图片来自：https://github.com/MisterBooo/LeetCodeAnimation](https://raw.githubusercontent.com/azl397985856/leetcode/master/assets/20.validParentheses.gif)
 
-## 代码
+## Code
 
 ```python
 class Solution:
