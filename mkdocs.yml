@@ -10,6 +10,9 @@ nav:
       - Chrome Extensions: app/Whats-in-my-Chrome-extensions.md
       - Tampermonkey scripts: app/Whats-in-my-tampermonkey.md
 
+  - Leetcode:
+      - 20. Valid Parentheses: leetcode/valid_parentheses.md 
+
   - Basic Knowledge:
       - How to Google: basic_knowledge/how_to_google.md
       - Learn double pinyin right now: basic_knowledge/double_pinyin.md
