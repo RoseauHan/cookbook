@@ -15,6 +15,9 @@ nav:
       - 26. Remove Duplicates from Sorted Array: leetcode/Remove_Duplicates_from_Sorted_Array.md
       - 125.valid palindrome: leetcode/valid_palindrome.md
 
+  - Algorithm:
+      - Two pointers: algo/two_pointers.md
+
   - Basic Knowledge:
       - How to Google: basic_knowledge/how_to_google.md
       - Learn double pinyin right now: basic_knowledge/double_pinyin.md
