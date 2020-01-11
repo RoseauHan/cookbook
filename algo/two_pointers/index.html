@@ -1,0 +1,1453 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="roseau knowledge database.">
+      
+      
+        <link rel="canonical" href="https://roseauhan.github.io/cookbook/algo/two_pointers/">
+      
+      
+        <meta name="author" content="roseauhan">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Two pointers - Cookbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../../assets/manifest.webmanifest">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://roseauhan.github.io/cookbook/" title="Cookbook" class="md-header-nav__button md-logo">
+          
+            <img src="../../assets/favicon.ico" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Cookbook
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Two pointers
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/RoseauHan/cookbook/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Cookbook
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Cookbook
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../app/Whats-in-my-Mac/" class="md-tabs__link">
+          App
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../leetcode/valid_parentheses/" class="md-tabs__link">
+          Leetcode
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          Algorithm
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../basic_knowledge/how_to_google/" class="md-tabs__link">
+          Basic Knowledge
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../data_science/data_science_intro/" class="md-tabs__link">
+          Data Science
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://roseauhan.github.io/cookbook/" title="Cookbook" class="md-nav__button md-logo">
+      
+        <img src="../../assets/favicon.ico" width="48" height="48">
+      
+    </a>
+    Cookbook
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/RoseauHan/cookbook/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Cookbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Cookbook" class="md-nav__link">
+      Cookbook
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      App
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        App
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-Mac/" title="Mac App" class="md-nav__link">
+      Mac App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-Win10/" title="Win10 App" class="md-nav__link">
+      Win10 App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-iPad/" title="iPad App" class="md-nav__link">
+      iPad App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-Android/" title="Android App" class="md-nav__link">
+      Android App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-Chrome-extensions/" title="Chrome Extensions" class="md-nav__link">
+      Chrome Extensions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app/Whats-in-my-tampermonkey/" title="Tampermonkey scripts" class="md-nav__link">
+      Tampermonkey scripts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Leetcode
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Leetcode
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../leetcode/valid_parentheses/" title="20. Valid Parentheses" class="md-nav__link">
+      20. Valid Parentheses
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../leetcode/Remove_Duplicates_from_Sorted_Array/" title="26. Remove Duplicates from Sorted Array" class="md-nav__link">
+      26. Remove Duplicates from Sorted Array
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../leetcode/valid_palindrome/" title="125.valid palindrome" class="md-nav__link">
+      125.valid palindrome
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Algorithm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Algorithm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Two pointers
+      </label>
+    
+    <a href="./" title="Two pointers" class="md-nav__link md-nav__link--active">
+      Two pointers
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    首尾双指针
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    翻转字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    两数之和
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    三数之和
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    最接近的三数之和
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    两数之和 - 小于等于目标值的个数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    三数之和 - 小于等于目标值的个数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valid-triangle-number" class="md-nav__link">
+    三角形计数 Valid Triangle Number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trapping-rain-water" class="md-nav__link">
+    接雨水 Trapping Rain Water 一维
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-with-most-water" class="md-nav__link">
+    盛最多水的容器 Container With Most Water
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    颜色分类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Basic Knowledge
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Basic Knowledge
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic_knowledge/how_to_google/" title="How to Google" class="md-nav__link">
+      How to Google
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic_knowledge/double_pinyin/" title="Learn double pinyin right now" class="md-nav__link">
+      Learn double pinyin right now
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data_science/data_science_intro/" title="data science intro" class="md-nav__link">
+      data science intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data_science/IPython_intro/" title="IPython intro" class="md-nav__link">
+      IPython intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data_science/numpy_intro/" title="NumPy intro" class="md-nav__link">
+      NumPy intro
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data_science/tool_chain/" title="Data Science tool chain" class="md-nav__link">
+      Data Science tool chain
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    首尾双指针
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    翻转字符串
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    两数之和
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    三数之和
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    最接近的三数之和
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    两数之和 - 小于等于目标值的个数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    三数之和 - 小于等于目标值的个数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valid-triangle-number" class="md-nav__link">
+    三角形计数 Valid Triangle Number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trapping-rain-water" class="md-nav__link">
+    接雨水 Trapping Rain Water 一维
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-with-most-water" class="md-nav__link">
+    盛最多水的容器 Container With Most Water
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    颜色分类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/RoseauHan/cookbook/edit/master/docs/algo/two_pointers.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="_1">双指针<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">首尾双指针<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>一般用于寻找数组/双向链表中满足条件的 <strong>两个节点</strong>；如果是寻找多个数，则先固定前 n-2 个数</p>
+<ul>
+<li>确保有序 list.sort()</li>
+<li>while 循环</li>
+<li>双指针初始化</li>
+<li>迭代</li>
+<li>去重复</li>
+</ul>
+<h3 id="_3"><a href="https://leetcode.com/problems/reverse-string/">翻转字符串</a><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">翻转字符串</p>
+<p>Write a function that reverses a string. The input string is given as an array of characters char[].</p>
+<p>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.</p>
+<p>You may assume all the characters consist of printable ascii characters.</p>
+</div>
+<details class="tip"><summary>Answer</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">reverseString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Do not return anything, modify s in-place instead.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+        <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">:</span>
+            <span class="n">s</span><span class="p">[</span><span class="n">left</span><span class="p">],</span><span class="n">s</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">right</span><span class="p">],</span><span class="n">s</span><span class="p">[</span><span class="n">left</span><span class="p">]</span>
+            <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
+</pre></div>
+
+</details>
+<h3 id="_4"><a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">两数之和</a><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">两数之和</p>
+<p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
+<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
+<p>说明:</p>
+<p>返回的下标值（index1 和 index2）不是从零开始的。
+你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。
+示例:
+<div class="codehilite"><pre><span></span><span class="err">输入</span><span class="o">:</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">[</span><span class="mi">2</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">11</span><span class="o">,</span> <span class="mi">15</span><span class="o">],</span> <span class="n">target</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="err">输出</span><span class="o">:</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">]</span>
+<span class="err">解释</span><span class="o">:</span> <span class="mi">2</span> <span class="err">与</span> <span class="mi">7</span> <span class="err">之和等于目标数</span> <span class="mi">9</span> <span class="err">。因此</span> <span class="n">index1</span> <span class="o">=</span> <span class="mi">1</span><span class="o">,</span> <span class="n">index2</span> <span class="o">=</span> <span class="mi">2</span> <span class="err">。</span>
+</pre></div></p>
+</div>
+<details class="tip"><summary>Answer 1: Two Pointers</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numbers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+        <span class="n">lo</span><span class="p">,</span><span class="n">hi</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+        <span class="k">while</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">lo</span><span class="p">]</span> <span class="o">+</span> <span class="n">numbers</span><span class="p">[</span><span class="n">hi</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">s</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>
+                <span class="n">hi</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="k">elif</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">:</span>
+                <span class="n">lo</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">lo</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">hi</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+
+</details>
+<details class="tip"><summary>Answer 2: Dict</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Solition</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">twoSum2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numbers</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">target</span><span class="o">-</span><span class="n">num</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">[</span><span class="n">dic</span><span class="p">[</span><span class="n">target</span><span class="o">-</span><span class="n">num</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">dic</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+</pre></div>
+
+</details>
+<h3 id="_5"><a href="https://leetcode.com/problems/3sum/description/">三数之和</a><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">三数之和</p>
+<p>给定一个包含 n 个整数的数组 nums，
+判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？
+找出所有满足条件且不重复的三元组。</p>
+<p>注意：答案中不可以包含重复的三元组。</p>
+<p>例如, 给定数组 nums = [-1, 0, 1, 2, -1, -4]，</p>
+<p>满足要求的三元组集合为：
+<div class="codehilite"><pre><span></span><span class="p">[</span>
+<span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div></p>
+</div>
+<details class="tip"><summary>Tip</summary><ul>
+<li>排序 + 首尾双指针</li>
+<li>将第三个数当作前两个数的目标和，在两数之和的基础上套一层循环</li>
+<li>难点在于如何 <strong>去重</strong>（不借用 set）</li>
+</ul>
+</details>
+<details class="tip"><summary>Answer</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">threeSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="n">nums</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># 首先排序</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span> <span class="c1"># 对第一个数去重</span>
+                <span class="k">continue</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="o">-</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">while</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">:</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">lo</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">hi</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">s</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>
+                    <span class="n">hi</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="k">elif</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">:</span>
+                    <span class="n">lo</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">nums</span><span class="p">[</span><span class="n">lo</span><span class="p">],</span><span class="n">nums</span><span class="p">[</span><span class="n">hi</span><span class="p">]])</span>
+                    <span class="n">lo</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># 先移指针</span>
+                    <span class="k">while</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="n">hi</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">lo</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">lo</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span> <span class="c1"># 再去重</span>
+                        <span class="n">lo</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+
+</details>
+<h3 id="_6"><a href="https://leetcode.com/problems/3sum-closest/description/">最接近的三数之和</a><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">最接近的三数之和</p>
+<p>给定一个包括 n 个整数的数组 nums 和 一个目标值 target。
+找出 nums 中的三个整数，使得它们的和与 target 最接近。
+返回这三个数的和。假定每组输入只存在唯一答案。</p>
+<p>例如，给定数组 <code class="codehilite"><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="err">，</span><span class="mi">2</span><span class="err">，</span><span class="mi">1</span><span class="err">，</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span></code>, 和 <code class="codehilite"><span class="n">target</span> <span class="o">=</span> <span class="mi">1</span></code>.</p>
+<p>与 target 最接近的三个数的和为 2.<code class="codehilite"><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code>.</p>
+</div>
+<details class="tip"><summary>Tip</summary><ul>
+<li>排序 + 双指针</li>
+<li>更接近：差的绝对值更小</li>
+</ul>
+</details>
+<details class="tip"><summary>Answer</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">threeSumClosest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">nums</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># 先排序</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+        <span class="n">closest</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># 用一个特殊值初始化</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span> <span class="c1"># 第一个数去重</span>
+                <span class="k">continue</span>
+            <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="c1"># 首尾双指针</span>
+            <span class="k">while</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">:</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">lo</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">hi</span><span class="p">]</span>
+                <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">target</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">closest</span><span class="o">-</span><span class="n">target</span><span class="p">):</span> <span class="c1"># 更接近</span>
+                    <span class="n">closest</span> <span class="o">=</span> <span class="n">s</span>
+                <span class="k">if</span> <span class="n">s</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>
+                    <span class="n">hi</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="k">elif</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">:</span>
+                    <span class="n">lo</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">target</span>
+        <span class="k">return</span> <span class="n">closest</span>
+</pre></div>
+
+</details>
+<h3 id="-"><a href="https://blog.csdn.net/qq_36387683/article/details/81460276">两数之和 - 小于等于目标值的个数</a><a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">两数之和 - 小于等于目标值的个数</p>
+<p>给定一个整数数组，找出这个数组中有多少对的和是小于或等于目标值。返回对数。</p>
+<p>样例
+<div class="codehilite"><pre><span></span>    <span class="err">给定数组为</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span><span class="err">，目标值为</span> <span class="mi">24</span>
+    <span class="err">返回</span> <span class="mi">5</span><span class="err">。</span>
+    <span class="mi">2</span><span class="o">+</span><span class="mi">7</span><span class="o">&lt;</span><span class="mi">24</span>
+    <span class="mi">2</span><span class="o">+</span><span class="mi">11</span><span class="o">&lt;</span><span class="mi">24</span>
+    <span class="mi">2</span><span class="o">+</span><span class="mi">15</span><span class="o">&lt;</span><span class="mi">24</span>
+    <span class="mi">7</span><span class="o">+</span><span class="mi">11</span><span class="o">&lt;</span><span class="mi">24</span>
+    <span class="mi">7</span><span class="o">+</span><span class="mi">15</span><span class="o">&lt;</span><span class="mi">24</span>
+</pre></div></p>
+</div>
+<details class="tip"><summary>Tip</summary><ul>
+<li>排序 + 首尾双指针</li>
+<li>根据条件判断迭代增幅</li>
+</ul>
+</details>
+<details class="tip"><summary>Answer</summary><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">nums</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span><span class="n">target</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">int</span><span class="p">:</span>
+    <span class="n">nums</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># 首尾双指针一般要求有序</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+    <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">:</span> 
+        <span class="n">s</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">lo</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">hi</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">s</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>
+            <span class="n">hi</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="n">hi</span> <span class="o">-</span> <span class="n">lo</span> <span class="c1"># 若最小和最大的和小于目标，则最小和其他和一定都小于目标，故每次递增hi-lo</span>
+            <span class="n">lo</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+
+</details>
+<h3 id="-_1"><a href="https://www.lintcode.com/problem/3sum-smaller/description">三数之和 - 小于等于目标值的个数</a><a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">三数之和 - 小于等于目标值的个数</p>
+<p>给定一个n个整数的数组和一个目标整数target，
+找到下标为i、j、k的数组元素<code class="codehilite"><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">n</span></code>，满足条件<code class="codehilite"><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nums</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">target</span><span class="p">.</span><span class="w"></span></code></p>
+<p>样例
+给定 <code class="codehilite"><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">target</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span></code> 返回 2.</p>
+<p>解释:
+<div class="codehilite"><pre><span></span>    <span class="err">因为有两种三个元素之和，它们的和小于</span><span class="mi">2</span><span class="p">:</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div></p>
+</div>
+<details class="tip"><summary>Tip</summary><ul>
+<li>排序 + 双指针</li>
+</ul>
+</details>
+<details class="tip"><summary>Answer</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">@param nums:  an array of n integers</span>
+<span class="sd">@param target: a target</span>
+<span class="sd">@return: the number of index triplets satisfy the condition nums[i] + nums[j] + nums[k] &lt; target</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">threeSumSmaller</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="c1"># Write your code here</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+    <span class="n">nums</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span>
+        <span class="k">while</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">lo</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">hi</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="n">hi</span> <span class="o">-</span> <span class="n">lo</span>
+                <span class="n">lo</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">hi</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+
+</details>
+<h3 id="valid-triangle-number"><a href="https://leetcode-cn.com/problems/valid-triangle-number/description/">三角形计数 Valid Triangle Number</a><a class="headerlink" href="#valid-triangle-number" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">三角形计数</p>
+<p>给定一个包含非负整数的数组，你的任务是统计其中可以组成三角形三条边的三元组个数。
+<div class="codehilite"><pre><span></span><span class="err">示例</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="err">输入</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+    <span class="err">输出</span><span class="p">:</span> <span class="mi">3</span>
+<span class="err">解释</span><span class="p">:</span>
+    <span class="err">有效的组合是</span><span class="p">:</span> 
+    <span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span> <span class="p">(</span><span class="err">使用第一个</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span> <span class="p">(</span><span class="err">使用第二个</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span>
+<span class="err">注意</span><span class="p">:</span>
+    <span class="err">数组长度不超过</span><span class="mi">1000</span><span class="err">。</span>
+    <span class="err">数组里整数的范围为</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span><span class="err">。</span>
+</pre></div></p>
+</div>
+<details class="tip"><summary>Tip</summary><ul>
+<li>排序 + 首尾双指针</li>
+<li>相当于两数之和大于目标值的个数</li>
+<li>我们先对这个数组进行排序，排序之后我们来指出这个三角形中最长的边，那么剩下两条边的要求是：两边之和大于最长边。</li>
+<li>所以，我们只需要对最长边进行变遍历，对两个短边再遍历即可。</li>
+<li>短边的遍历方法是：一个从0开始的短边 <code class="codehilite"><span class="n">lo</span></code>，一个从比最长边的短的一个边 <code class="codehilite"><span class="n">hi</span></code> 开始向中间遍历。如果能够成三角形，那么说明比<code class="codehilite"><span class="n">lo</span></code>长的短边和<code class="codehilite"><span class="n">hi</span></code>结合也都能组成三角形。如果不能组成三角形，那么说明<code class="codehilite"><span class="n">lo</span></code>太小了，需要向中间移动。</li>
+<li>排序算法时间复杂度是O(nlogn)，for循环时间复杂度为O(n)，while循环虽然有两个变量，但是这两个变量是同时向中间移动的关系，所以时间复杂度不会超过O(n)，总体的时间复杂度是O(n)。空间复杂度是O(1)。</li>
+</ul>
+</details>
+<details class="tip"><summary>Answer</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">triangleNumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :type A: List[int]</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">A</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+        <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>  <span class="c1"># 注意：循环区间,保证了两边之差一定小于第三边</span>
+
+            <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">while</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">:</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">lo</span><span class="p">]</span> <span class="o">+</span> <span class="n">A</span><span class="p">[</span><span class="n">hi</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="n">s</span> <span class="o">&gt;</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                    <span class="n">cnt</span> <span class="o">+=</span> <span class="n">hi</span> <span class="o">-</span> <span class="n">lo</span>
+                    <span class="n">hi</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">lo</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">cnt</span>
+</pre></div>
+
+</details>
+<h3 id="trapping-rain-water"><a href="https://leetcode-cn.com/problems/trapping-rain-water/description/">接雨水 Trapping Rain Water 一维</a><a class="headerlink" href="#trapping-rain-water" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">接雨水 Trapping Rain Water 一维</p>
+<p>给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
+<div class="codehilite"><pre><span></span><span class="err">示例</span><span class="o">:</span>
+    <span class="err">输入</span><span class="o">:</span> <span class="o">[</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">1</span><span class="o">]</span>
+    <span class="err">输出</span><span class="o">:</span> <span class="mi">6</span>
+</pre></div></p>
+</div>
+<details class="tip"><summary>Tip</summary><ul>
+<li>双指针，遍历一次数组</li>
+<li>一个位置可装水的量由 <code class="codehilite"><span class="err">它左右最低的木板</span><span class="o">-</span><span class="err">自身高度</span></code> 决定</li>
+<li><a href="https://www.bilibili.com/video/av18241289/?spm_id_from=333.788.videocard.1">视频讲解</a></li>
+</ul>
+</details>
+<details class="tip"><summary>Answer</summary><div class="codehilite"><pre><span></span>    <span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">trap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+            <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="c1"># 初始化指针</span>
+            <span class="n">max_left</span> <span class="o">=</span> <span class="n">max_right</span><span class="o">=</span> <span class="mi">0</span> <span class="c1"># 初始化左右最高高度[左右木板]   </span>
+            <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># 初始化答案</span>
+            <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">:</span> <span class="c1"># 直到左右指针相遇</span>
+                <span class="k">if</span> <span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">]:</span> <span class="c1"># 若右指针对应高度更高 -&gt; 处理左边：木桶效应，可以装的雨水由最短的一边确定。</span>
+                    <span class="k">if</span> <span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_left</span><span class="p">:</span> <span class="c1"># 若左指针对应高度比当前左木板更高</span>
+                        <span class="n">max_left</span> <span class="o">=</span> <span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="c1"># 则该块充当左边木板，更新左木板高度</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">res</span> <span class="o">+=</span> <span class="n">max_left</span> <span class="o">-</span> <span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="c1"># 否则，该块可以装雨水；量：左边木板-该块高度</span>
+                    <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># 向右逼近</span>
+                <span class="k">elif</span> <span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">]:</span> <span class="c1"># 若左指针对应高度更高 -&gt; 处理右边：木桶效应，可以装的雨水由最短的一边确定。</span>
+                    <span class="k">if</span> <span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_right</span><span class="p">:</span> <span class="c1"># 若右指针对应高度比当前右木板更高</span>
+                        <span class="n">max_right</span> <span class="o">=</span> <span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="c1"># 则该块充当右边木板，更新右木板高度</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">res</span> <span class="o">+=</span> <span class="n">max_right</span> <span class="o">-</span> <span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="c1"># 否则，该块可装雨水；量：右木板高度-该块高度 </span>
+                    <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span> <span class="c1"># 向左逼近</span>
+            <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+
+</details>
+<h3 id="container-with-most-water"><a href="https://leetcode.com/problems/container-with-most-water/description/">盛最多水的容器 Container With Most Water</a><a class="headerlink" href="#container-with-most-water" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">盛最多水的容器</p>
+<p>给定 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
+说明：你不能倾斜容器，且 n 的值至少为 2。
+<div class="codehilite"><pre><span></span><span class="err">示例</span><span class="o">:</span>
+    <span class="err">输入</span><span class="o">:</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="mi">8</span><span class="o">,</span><span class="mi">6</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">5</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">8</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">7</span><span class="o">]</span>
+    <span class="err">输出</span><span class="o">:</span> <span class="mi">49</span>
+</pre></div></p>
+</div>
+<details class="tip"><summary>Tip</summary><ul>
+<li>首尾双指针</li>
+<li>注意由于水的连通性（木桶效应），水的面积是 <code class="codehilite"><span class="err">底边</span> <span class="o">*</span> <span class="err">最短的竖边</span></code></li>
+<li>双指针根据竖边的高低进行迭代，具体面积大小需再判断后再替换。</li>
+</ul>
+</details>
+<details class="tip"><summary>Answer</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">maxArea</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">height</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># 初始化指针</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="p">)</span> <span class="o">*</span> <span class="nb">min</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">],</span><span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">])</span> <span class="c1"># 初始化面积</span>
+
+        <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">:</span> <span class="c1"># 直到两指针相遇</span>
+            <span class="k">if</span> <span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">]:</span> <span class="c1"># 若右指针更高</span>
+                <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># 向右逼近</span>
+            <span class="k">else</span><span class="p">:</span> <span class="c1"># 若左指针更高</span>
+                <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span> <span class="c1"># 向左逼近</span>
+
+            <span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="n">right</span><span class="o">-</span><span class="n">left</span><span class="p">)</span> <span class="o">*</span> <span class="nb">min</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">right</span><span class="p">],</span><span class="n">height</span><span class="p">[</span><span class="n">left</span><span class="p">])</span> <span class="c1"># 当前面积</span>
+            <span class="k">if</span> <span class="n">area</span> <span class="o">&gt;</span> <span class="n">res</span><span class="p">:</span> <span class="n">res</span> <span class="o">=</span> <span class="n">area</span> <span class="c1"># 若更大，则更新最大面积</span>
+        <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+
+</details>
+<h3 id="_7"><a href="https://leetcode.com/problems/sort-colors/">颜色分类</a><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">颜色分类</p>
+<p>给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。</p>
+<p>此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。</p>
+<p>注意:
+不能使用代码库中的排序函数来解决这道题。</p>
+<p>示例:
+<div class="codehilite"><pre><span></span><span class="err">输入</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="err">输出</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div></p>
+<p>进阶：
+一个直观的解决方案是使用计数排序的两趟扫描算法。
+首先，迭代计算出0、1 和 2 元素的个数，然后按照0、1、2的排序，重写当前数组。
+你能想出一个仅使用常数空间的一趟扫描算法吗？</p>
+</div>
+<details class="tip"><summary>Tip</summary><ul>
+<li>首尾双指针<ul>
+<li><code class="codehilite"><span class="n">l</span></code> 记录最后一个 0 的位置</li>
+<li><code class="codehilite"><span class="n">r</span></code> 记录第一个 2 的位置</li>
+<li><code class="codehilite"><span class="n">i</span></code> 表示当前遍历的元素</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="tip"><summary>Answer</summary><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">sortColors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :type A: List[int]</span>
+<span class="sd">        :rtype: void Do not return anything, modify A in-place instead.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+        <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># l 指示最后一个 0</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># r 指示第一个 2</span>
+
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">l</span><span class="p">]</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 确定最后一个 0</span>
+                <span class="n">l</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># 确定第一个 2</span>
+                <span class="n">r</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>  <span class="c1"># 注意回退，因为不确定原 A[r] 处是什么</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+</details>
+                
+                  
+                
+                
+                  
+                  <hr>
+                  <div class="md-source-date">
+                    <small>
+                      
+                        最后更新: 2020-01-11
+                      
+                    </small>
+                  </div>
+                
+              
+              
+                
+
+
+  <h2 id="__comments">评论</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://roseauhan.github.io/cookbook/algo/two_pointers/";
+      this.page.identifier =
+        "algo/two_pointers/";
+    };
+    (function() {
+      var d = document, s = d.createElement("script");
+      s.src = "//roseauhan.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../leetcode/valid_palindrome/" title="125.valid palindrome" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                125.valid palindrome
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../basic_knowledge/how_to_google/" title="How to Google" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                How to Google
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; roseau 2019 - 2020 
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/roseauhan" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/roseauhan" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://dribbble.com/roseauhan" class="md-footer-social__link fa fa-dribbble"></a>
+    
+      <a href="https://roseauhan.github.io" class="md-footer-social__link fa fa-rss"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
