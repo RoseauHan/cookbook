@@ -6,64 +6,64 @@ authors:
 date: 2020-01-01
 ---
 
-## Addr
 
-https://leetcode.com/problems/valid-parentheses/description
+[valid_parentheses](https://leetcode.com/problems/valid-parentheses/description)
 
-## Desc
+!!! question "valid_parentheses"
 
-```
-Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+    Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
-An input string is valid if:
+    An input string is valid if:
 
-Open brackets must be closed by the same type of brackets.
-Open brackets must be closed in the correct order.
-Note that an empty string is also considered valid.
+    Open brackets must be closed by the same type of brackets.
+    Open brackets must be closed in the correct order.
+    Note that an empty string is also considered valid.
 
-Example 1:
+    ```
+    Example 1:
 
-Input: "()"
-Output: true
-Example 2:
+    Input: "()"
+    Output: true
+    Example 2:
 
-Input: "()[]{}"
-Output: true
-Example 3:
+    Input: "()[]{}"
+    Output: true
+    Example 3:
 
-Input: "(]"
-Output: false
-Example 4:
+    Input: "(]"
+    Output: false
+    Example 4:
 
-Input: "([)]"
-Output: false
-Example 5:
+    Input: "([)]"
+    Output: false
+    Example 5:
 
-Input: "{[]}"
-Output: true
-```
+    Input: "{[]}"
+    Output: true
+    ```
 
-## Algo
 
-Stack.
+??? tip
 
-![图片来自：https://github.com/MisterBooo/LeetCodeAnimation](https://raw.githubusercontent.com/azl397985856/leetcode/master/assets/20.validParentheses.gif)
+    Stack.
 
-## Code
+    ![图片来自：https://github.com/MisterBooo/LeetCodeAnimation](https://raw.githubusercontent.com/azl397985856/leetcode/master/assets/20.validParentheses.gif)
 
-```python
-class Solution:
-    def isValid(self, s: str) -> bool:
-        dic = {
-            ')':'(',
-            '}':'{',
-            ']':'['
-        }
-        stack = []
-        for i in s:
-            if stack and dic.get(i,None) == stack[-1]:
-                stack.pop()
-            else:
-                stack.append(i)
-        return stack == []
-```
+??? tip "Answer"
+
+    ```python
+    class Solution:
+        def isValid(self, s: str) -> bool:
+            dic = {
+                ')':'(',
+                '}':'{',
+                ']':'['
+            }
+            stack = []
+            for i in s:
+                if stack and dic.get(i,None) == stack[-1]:
+                    stack.pop()
+                else:
+                    stack.append(i)
+            return stack == []
+    ```
