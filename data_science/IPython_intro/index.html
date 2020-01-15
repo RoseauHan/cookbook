@@ -668,13 +668,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#2jupyter-notebook" class="md-nav__link">
-    2、衍生项目：Jupyter Notebook
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -717,6 +710,13 @@
         <li class="md-nav__item">
   <a href="#ipython_3" class="md-nav__link">
     三、IPython 参考资料
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebook" class="md-nav__link">
+    四、衍生项目：Jupyter Notebook
   </a>
   
 </li>
@@ -802,13 +802,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#2jupyter-notebook" class="md-nav__link">
-    2、衍生项目：Jupyter Notebook
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -855,6 +848,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jupyter-notebook" class="md-nav__link">
+    四、衍生项目：Jupyter Notebook
+  </a>
+  
+</li>
+      
       
       
       
@@ -888,9 +888,58 @@
 <h4 id="1ipython">1、IPython<a class="headerlink" href="#1ipython" title="Permanent link">&para;</a></h4>
 <p>Python 有很多种开发环境，一个不错的选择是：IPython。</p>
 <p>“IPython（interactive Python 的简称，即交互式 Python）由 Fernando Perez 作为一个增强的 Python 解释器于 2001 年启动，并由此发展为一个项目。用 Perez 的原话来说，该项目致力于提供“科学计算的全生命周期开发工具”。如果将 Python 看作数据科学任务的引擎，那么 IPython 就是一个交互式控制面板。”</p>
-<p>“除了作为 Python 的一个交互式接口，IPython 还提供了一些有用的 Python 语法附加功能，下面就将总结其中最有用的一些。</p>
+<p>除了作为 Python 的一个交互式接口，IPython 还提供了一些有用的 Python 语法附加功能，下面就将总结其中最有用的一些。</p>
 <p><img alt="" src="https://raw.githubusercontent.com/RoseauHan/upic/master/ipython_screen.png" /></p>
-<h4 id="2jupyter-notebook">2、衍生项目：Jupyter Notebook<a class="headerlink" href="#2jupyter-notebook" title="Permanent link">&para;</a></h4>
+<h3 id="ipython_1">二、IPython 常用功能总结<a class="headerlink" href="#ipython_1" title="Permanent link">&para;</a></h3>
+<h4 id="_1">帮助和文档：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>符号<code class="codehilite"><span class="err">？</span></code>获取文档</li>
+<li>符号<code class="codehilite"><span class="o">??</span></code>获取源代码</li>
+<li>Tab 补全探索模块</li>
+<li>反向搜索：<code class="codehilite"><span class="n">ctrl</span> <span class="n">r</span></code>：对历史命令反向搜索</li>
+</ul>
+<h4 id="ipython_2">IPython 魔法命令：<a class="headerlink" href="#ipython_2" title="Permanent link">&para;</a></h4>
+<p>IPython 提供了一些在普通 Python 语法基础之上的增强功能，这些功能被称作 IPython 魔法命令，都以<code class="codehilite"><span class="c">%</span></code>作为前缀。</p>
+<p>主要分为两大类：</p>
+<p><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:" /> 行魔法：<code class="codehilite"><span class="c">%</span></code>前缀，作用于单行输入</p>
+<p><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:" /> 单元魔法：<code class="codehilite"><span class="c">%%</span></code>前缀，作用于多行输入。</p>
+<p>常用命令如下：</p>
+<ul>
+<li><code class="codehilite"><span class="nf">%lsmagic</span></code> 所有魔法函数</li>
+<li><code class="codehilite"><span class="nf">%run</span></code> 执行外部代码</li>
+<li><code class="codehilite"><span class="nf">%timeit</span></code> 计算代码执行时间</li>
+<li><code class="codehilite"><span class="c">%%timeit</span></code> 计算多行代码执行时间 </li>
+<li><code class="codehilite"><span class="nf">%paste</span> <span class="nf">%cpaste</span></code> 粘贴代码块 (解决了直接 <strong>粘贴</strong> 时格式会混乱的问题)</li>
+<li><code class="codehilite"><span class="nf">%history</span></code> 一次性获取此前所有的历史输入 (解决了从ipython <strong>复制</strong> 时总有···的烦恼)</li>
+</ul>
+<blockquote>
+<p><a href="https://stackoverflow.com/questions/41070403/how-to-copy-from-ipython-session-without-terminal-prompts">%history 1 6-14 可以输出第1行和6到14行的命令。 后面加<code class="codehilite"><span class="o">-</span><span class="n">f</span> <span class="n">FILENAME</span></code>可以直接将结果写入文件。</a></p>
+</blockquote>
+<ul>
+<li><code class="codehilite"><span class="nf">%xmode</span></code> 控制异常</li>
+<li><code class="codehilite"><span class="nf">%debug</span></code> 调试</li>
+<li><code class="codehilite"><span class="nf">%prun</span></code> 分析整个脚本</li>
+</ul>
+<h4 id="_2">输入输出：<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>使用ipython shell，你一定对左边这些in，out特别熟悉，但是，它们不是装饰品：
+IPython 实际上创建了叫做 In 和 Out 的 Python <strong>变量</strong>，这些变量自动更新以反应命令历史。</p>
+<ul>
+<li>In 是一个 list，而 Out 是一个 Dictionary</li>
+<li>可以根据数字调用：<code class="codehilite"><span class="ow">In</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"> </span><span class="k">Out</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"></span></code></li>
+<li>变量 <code class="codehilite"><span class="n">_</span></code>(单下划线)获取前一个输出结果，两条下划线获得倒数第二个历史输出，三条下滑线获得倒数第三个历史输出</li>
+<li><code class="codehilite"><span class="k">Out</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"></span></code>的简写形式是 <code class="codehilite"><span class="n">_</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"></span></code></li>
+<li>禁止一个命令输出：行尾处添加分号</li>
+<li>命令前添加！，可执行 shell 命令，还可以在 shell 中传入或传出值</li>
+<li>从Shell向ipython传值：直接写个赋值表达式就可以，等号的右边是Shell命令：<code class="codehilite"><span class="n">contents</span> <span class="o">=</span> <span class="o">!</span><span class="n">dir</span></code></li>
+<li>从ipython向Shell传值：使用{变量名}的形式赋值：<code class="codehilite"><span class="n">echo</span> <span class="err">{</span><span class="n">message</span><span class="err">}</span></code></li>
+</ul>
+<h3 id="ipython_3">三、IPython 参考资料<a class="headerlink" href="#ipython_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://ipython.org">http://ipython.org</a></li>
+<li><a href="http://nbviewer.ipython.org">http://nbviewer.ipython.org</a></li>
+<li><a href="http://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks/">http://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks/</a></li>
+</ul>
+<h3 id="jupyter-notebook">四、衍生项目：Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permanent link">&para;</a></h3>
 <p>另外，IPython 被紧密地连接在 Jupyter 项目（<a href="http://jupyter.org">http://jupyter.org</a>）中。该项目提供一个基于浏览器的 Notebook，它可以开发、协作、分享甚至发布数据科学结果。IPython Notebook 其实只是通用 Jupyter Notebook 结构的特例，而 Jupyter Notebook 不仅支持 Python，还包括用于 Julia、R 和其他编程语言的 Notebook。”</p>
 <blockquote>
 <p>Jupyter 为 Python 提供了方便的交互式数据科学和科学计算平台。Jupyter 物品是一个非营利组织，旨在“为数十种编程语言的交互式计算开发开源软件，开放标准和服务”。</p>
@@ -910,45 +959,6 @@
 <li><a href="https://github.com/jupyter/notebook/tree/8881a06e0e01eaba277dfd118cfa429f9c418b9f"><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_git.png" alt="git" style="zoom:15%;" /> notebook</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Project_Jupyter"><img src="https://raw.githubusercontent.com/RoseauHan/upic/master/py_wiki.png" alt="wiki" style="zoom:15%;" /> Jupyter</a></li>
 </ol>
-<h3 id="ipython_1">二、IPython 常用功能总结<a class="headerlink" href="#ipython_1" title="Permanent link">&para;</a></h3>
-<h4 id="_1">帮助和文档：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
-<ul>
-<li>符号<code class="codehilite"><span class="err">？</span></code>获取文档</li>
-<li>符号<code class="codehilite"><span class="o">??</span></code>获取源代码</li>
-<li>Tab 补全探索模块</li>
-<li>反向搜索：<code class="codehilite"><span class="n">ctrl</span> <span class="n">r</span></code>：对历史命令反向搜索</li>
-</ul>
-<h4 id="ipython_2">IPython 魔法命令：<a class="headerlink" href="#ipython_2" title="Permanent link">&para;</a></h4>
-<p>IPython 提供了一些在普通 Python 语法基础之上的增强功能，这些功能被称作 IPython 魔法命令，都以<code class="codehilite"><span class="c">%</span></code>作为前缀。</p>
-<p>主要分为两大类：</p>
-<p><img alt="1️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0031-20e3.svg" title=":one:" /> 行魔法：<code class="codehilite"><span class="c">%</span></code>前缀，作用于单行输入</p>
-<p><img alt="2️⃣" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/0032-20e3.svg" title=":two:" /> 单元魔法：<code class="codehilite"><span class="c">%%</span></code>前缀，作用于多行输入。</p>
-<p>常用命令如下：</p>
-<ul>
-<li><code class="codehilite"><span class="nf">%lsmagic</span></code> 所有魔法函数</li>
-<li><code class="codehilite"><span class="nf">%paste</span> <span class="nf">%cpaste</span></code> 粘贴代码块</li>
-<li><code class="codehilite"><span class="nf">%run</span></code> 执行外部代码</li>
-<li><code class="codehilite"><span class="nf">%timeit</span></code> 计算代码运行时间</li>
-<li><code class="codehilite"><span class="nf">%history</span></code> 一次性获取此前所有的历史输入</li>
-<li><code class="codehilite"><span class="nf">%xmode</span></code> 控制异常</li>
-<li><code class="codehilite"><span class="nf">%debug</span></code> 调试</li>
-<li><code class="codehilite"><span class="nf">%prun</span></code> 分析整个脚本</li>
-</ul>
-<h4 id="_2">输入输出：<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<p>IPython 实际上创建了叫做 In 和 Out 的 Python 变量，这些变量自动更新以反应命令历史。</p>
-<ul>
-<li>可以根据数字调用：<code class="codehilite"><span class="ow">In</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"> </span><span class="k">Out</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"></span></code></li>
-<li>变量 <code class="codehilite"><span class="n">_</span></code>(单下划线)用于更新以前的输出，两条下划线获得倒数第二个历史输出，三条下滑线获得倒数第三个历史输出</li>
-<li><code class="codehilite"><span class="k">Out</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"></span></code>的简写形式是 <code class="codehilite"><span class="n">_</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="w"></span></code></li>
-<li>禁止一个命令输出：行尾处添加分号</li>
-<li>命令前添加！，可执行 shell 命令，还可以在 shell 中传入或传出值</li>
-</ul>
-<h3 id="ipython_3">三、IPython 参考资料<a class="headerlink" href="#ipython_3" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="http://ipython.org">http://ipython.org</a></li>
-<li><a href="http://nbviewer.ipython.org">http://nbviewer.ipython.org</a></li>
-<li><a href="http://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks/">http://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks/</a></li>
-</ul>
                 
                   
                 
@@ -958,7 +968,7 @@
                   <div class="md-source-date">
                     <small>
                       
-                        最后更新: 2019-12-31
+                        最后更新: 2020-01-15
                       
                     </small>
                   </div>
