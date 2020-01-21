@@ -17,6 +17,7 @@ nav:
 
   - Algorithm:
       - Two pointers: algo/two_pointers.md
+      - Sort: algo/sort.md
 
   - Basic Knowledge:
       - How to Google: basic_knowledge/how_to_google.md
