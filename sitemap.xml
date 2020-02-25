@@ -2,92 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://roseauhan.github.io/cookbook/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-Mac/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-Win10/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-iPad/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-Android/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-Chrome-extensions/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/app/Whats-in-my-tampermonkey/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/leetcode/valid_parentheses/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/leetcode/Remove_Duplicates_from_Sorted_Array/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/leetcode/valid_palindrome/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://roseauhan.github.io/cookbook/algo/complexity/</loc>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/algo/two_pointers/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/algo/sort/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/basic_knowledge/how_to_google/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/basic_knowledge/double_pinyin/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/data_science/data_science_intro/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/data_science/IPython_intro/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/data_science/numpy_intro/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://roseauhan.github.io/cookbook/data_science/matplotlib_intro/</loc>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://roseauhan.github.io/cookbook/data_science/tool_chain/</loc>
-     <lastmod>2020-01-21</lastmod>
+     <lastmod>2020-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
