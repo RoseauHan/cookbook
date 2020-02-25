@@ -11,7 +11,7 @@ nav:
       - Tampermonkey scripts: app/Whats-in-my-tampermonkey.md
 
   - Leetcode:
-      - 20. Valid Parentheses: leetcode/valid_parentheses.md 
+      - 20. Valid Parentheses: leetcode/valid_parentheses.md
       - 26. Remove Duplicates from Sorted Array: leetcode/Remove_Duplicates_from_Sorted_Array.md
       - 125.valid palindrome: leetcode/valid_palindrome.md
 
@@ -19,7 +19,7 @@ nav:
       - complexity: algo/complexity.md
       - Two pointers: algo/two_pointers.md
       - Sort: algo/sort.md
-  
+
   - Basic Knowledge:
       - How to Google: basic_knowledge/how_to_google.md
       - Learn double pinyin right now: basic_knowledge/double_pinyin.md
@@ -28,6 +28,7 @@ nav:
       - data science intro: data_science/data_science_intro.md
       - IPython intro: data_science/IPython_intro.md
       - NumPy intro: data_science/numpy_intro.md
+      - Matplotlib intro: data_science/matplotlib_intro.md
       - Data Science tool chain: data_science/tool_chain.md
 
 # Project information
@@ -109,4 +110,4 @@ plugins:
       type: iso_date
 
 extra_javascript:
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"
